@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import foodHomeBg from "../../assets/BGimages/food6.jpg";  
 
 export default function Food() {
   const foodCategories = [
@@ -14,13 +15,18 @@ export default function Food() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-white text-white py-16 px-6">
-      <div className="max-w-5xl mx-auto text-center space-y-8">
+        <div
+      className="min-h-screen bg-cover bg-center bg-no-repeat relative text-white"
+      style={{ backgroundImage: `url(${foodHomeBg})` }}
+    >
+      
+
+      <div className="relative z-10 max-w-5xl mx-auto text-center space-y-8 py-16 px-6">
         <h1 className="text-5xl font-serif font-bold text-emerald-400 drop-shadow-md">
           Vic’s Food Training
         </h1>
 
-        <p className="text-lg font-mono font-semibold text-gray-200">
+        <p className="text-lg font-mono font-semibold text-white-500">
           Explore each category to learn descriptions, ingredients, and presentation details for every dish on our menu.
         </p>
 

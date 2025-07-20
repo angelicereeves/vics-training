@@ -31,7 +31,7 @@ export default function WineHome() {
           </Link>
           <Link
             to="/wine/white"
-            className="px-6 py-3 bg-emerald-500 text-black font-bold rounded-full shadow-lg hover:bg-emerald-400 transition"
+            className="px-6 py-3 bg-emerald-700 text-white font-bold rounded-full shadow-lg hover:bg-emerald-400 transition"
           >
             BTB White Wines
           </Link>
