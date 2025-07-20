@@ -1,5 +1,16 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import BlackLabelGavi from "../../../assets/wineImages/blacklabelgavi.jpg";
+import SantaMargPG from "../../../assets/wineImages/santamarg.jpg";
+import ElenaWalch from "../../../assets/wineImages/elenawalch.jpg";
+import PalomaDePlato from "../../../assets/wineImages/palomaalbarino.jpg";
+import Eroica from "../../../assets/wineImages/eroica.jpg";
+import SoavePieropan from "../../../assets/wineImages/soavepieropan.jpg";
+import LivioFelluga from "../../../assets/wineImages/liviofelluga.jpg";
+import JustinRose from "../../../assets/wineImages/justinrose.jpg";
+import AlbertBichotStVeran from "../../../assets/wineImages/albertbichotstveran.jpg";
+import Voskevaz from "../../../assets/wineImages/voskevaz.jpg";
+
 
 export default function InterestingWhites() {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -29,63 +40,83 @@ function renderScale(metrics) {
   const interestingWhites = [
     {
       name: "Gavi di Gavi - La Scolca Black Label, Piedmont, Italy, 2022",
+      image: BlackLabelGavi,
       description:
         "Medium-bodied and bone-dry with high, zesty acidity. Offers bright citrus (lemon, lime, green apple) along with flinty, saline minerality. Finishes with nutty undertones—almond and walnut—and a lingering savory texture. Elegant and refined.",
-      price: "$120",
+      price: "120",
+      website: "https://www.lascolca.net/en/gavi-dei-gavi-black-label-2/",
     },
     {
       name: "Pinot Grigio - Santa Margherita Valda, Alto Adige, 2023",
+      image: SantaMargPG,
       description:
         "A dry white wine with the delightful aroma of Golden Delicious apples, straw-yellow hue, clean intense aroma, and bright, well-balanced taste.",
-      price: "$75",
+      price: "75",
+      website: "https://santamargheritausa.com/wp-content/uploads/2016/08/SM-PG-AA-Tech-Sheet.pdf",
     },
     {
       name: "Pinot Grigio - Elena Walch, Alto Adige, Italy 2023",
+      image: ElenaWalch,
       description:
         "Medium bodied, dry with a slight hint of sweetness, and medium acidity with notes of tree fruits, citrus, and earthy tones. Fruit forward and bright with notes of pear, white pepper, and sage, and a floral and mineral finish.",
-      price: "$65",
+      price: "65",
+      website: "https://www.elenawalch.com/en-GB/product/Pinot-Grigio",
     },
     {
       name: "Albarino - Rias Baixas Paloma De Platô, Spain 2021",
+      image: PalomaDePlato,
       description:
         "Bright citrus and stone fruit flavors, such as lemon, lime, and peach, along with floral and saline mineral notes. Refreshing acidity, smooth texture, and a clean, zesty finish.",
-      price: "$90",
+      price: "90",
+      website: "https://www.wijnhandelkunst.nl/Store/Paloma-de-Plato-Albari%C3%B1o-Rias-Baixas-Spanje-2021-p680750830",
     },
     {
       name: "Riesling - Eroica, Columbia Valley, WA 2022",
+      image: Eroica,
       description:
         "Medium bodied, dry with a touch of sweetness, higher acidity, notes of tree fruits, citrus, and earthy notes. Offers a sweet lime and peach aroma with subtle notes of minerals and a mouthwatering feel.",
-      price: "$75",
+      price: "75",
+      website: "https://www.eroicawine.com/wines/2022-riesling",
     },
     {
       name: "Soave - Pieropan, Soave, Italy 2020",
+      image: SoavePieropan,
       description:
         "Light white wine with aromas of almonds, marzipan, honey, lemon, and herbs with flavors of stone fruits. High acidity leads to a zingy taste.",
-      price: "$50",
+      price: "50",
+      website: "https://www.pieropan.it/en/wines/soave-classico",
     },
     {
       name: "Friulano - Livio Felluga Colli Orientali Del Friuli 2019",
+      image: LivioFelluga,
       description:
         "Medium full bodied, semi dry, with medium acidity. Notes of tree fruits, citrus, balsamic, white pepper, herbs, and fruits like apples, pears, and peaches.",
-      price: "$65",
+      price: "65",
+      website: "https://mmdusa.net/portfolio/livio-felluga/friulano-doc",
     },
     {
       name: "Rosé - Justin, Paso Robles, CA 2023",
+      image: JustinRose,
       description:
         "Dry and aromatic wine made from mainly Syrah grapes, bright red fruits, citrus, and herbal notes. Great for hot weather.",
-      price: "$60",
+      price: "60",
+      website: "https://www.justinwine.com/product/2023-rose-750",
     },
     {
       name: "White Burgundy - Albert Bichot St. Veran, Burgundy, France 2021",
+      image: AlbertBichotStVeran,
       description:
         "Light bodied, medium acidity, medium fruitiness, no oak aging and no sweetness. Bright, floral, fruity, mineraly and spiced wine.",
-      price: "$95",
+      price: "95",
+      website: "https://www.albert-bichot.com/fichiers/Saint_Veran--Domaines_Albert_Bichot--vin_co_31LQ0E.pdf",
     },
     {
       name: "White Burgundy - Voskevaz, Voskehat, Armenia 2017",
+      image: Voskevaz,
       description:
         "Delicate aromas of citrus and flowers balanced by notes of toasty oak. Fuller bodied yet energetic, with layered flavors of citrus and pear. Creamy texture and elegant finish.",
-      price: "$105",
+      price: "105",
+      website: "https://www.storicawines.com/wp-content/uploads/2021/11/voskevaz-karasi-voskehat-2021-3.pdf",
     },
   ];
 
@@ -174,47 +205,72 @@ function renderScale(metrics) {
 
         <div className="space-y-6">
           {interestingWhites.map((wine, index) => (
-            <div
-              key={index}
-              className="bg-gray-900 bg-opacity-80 p-6 rounded-xl shadow-lg border border-emerald-500"
-            >
-              <button
-                onClick={() =>
-                  setExpandedIndex(expandedIndex === index ? null : index)
-                }
-                className="w-full text-left focus:outline-none"
-              >
-                <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-bold text-white">{wine.name}</h3>
-                  <span
-                    className={`text-xl font-bold transition ${
-                      expandedIndex === index
-                        ? "text-emerald-400"
-                        : "text-gray-300"
-                    }`}
-                  >
-                    {expandedIndex === index ? "−" : "+"}
-                  </span>
-                </div>
-              </button>
-              {expandedIndex === index && (
-                <p className="text-gray-300 text-sm mt-3 leading-relaxed transition duration-300 ease-in-out">
-                  {wine.description}
-                </p>
-              )}
-            </div>
-          ))}
-        </div>
-
-        <div className="text-center pt-10">
-          <Link
-            to="/wine/white"
-            className="inline-block text-sm font-semibold text-emerald-300 hover:text-white border border-emerald-300 px-4 py-2 rounded-full transition duration-200"
-          >
-            ← Back to White Wines
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
+           <div
+                         key={index}
+                         className="bg-gray-900 bg-opacity-80 p-6 rounded-xl shadow-lg border border-emerald-500"
+                       >
+                         <button
+                           onClick={() =>
+                             setExpandedIndex(expandedIndex === index ? null : index)
+                           }
+                           className="w-full text-left focus:outline-none"
+                         >
+                           <div className="flex items-center justify-between">
+                             <h3 className="text-lg font-bold text-white">{wine.name}</h3>
+                             <span
+                               className={`text-xl font-bold transition ${
+                                 expandedIndex === index
+                                   ? "text-emerald-400"
+                                   : "text-gray-300"
+                               }`}
+                             >
+                               {expandedIndex === index ? "−" : "+"}
+                             </span>
+                           </div>
+                         </button>
+                         {expandedIndex === index && (
+                           <div className="px-6 pb-6 text-gray-300 font-mono space-y-2">
+           <img
+             src={wine.image}
+             alt={wine.name}
+             className="w-32 h-auto rounded-lg shadow-md mx-auto"
+           />
+           
+           {wine.website && (
+             <p className="text-center mt-2">
+               <a
+                 href={wine.website}
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="text-emerald-300 underline hover:text-emerald-200 text-sm"
+               >
+                 Visit Wine Website
+               </a>
+             </p>
+           )}
+           
+           <p>
+             <span className="text-emerald-300 font-bold">Tasting Notes:</span> {wine.description}
+             <br />
+             <br />
+             <span className="text-emerald-400 font-semibold"> Price: ${wine.price}</span>
+           
+           </p>
+                         </div>
+                         )}
+                       </div>
+                     ))}
+                   </div>
+           
+                   <div className="text-center pt-10">
+                     <Link
+                       to="/wine/white"
+                       className="inline-block text-sm font-semibold text-emerald-300 hover:text-white border border-emerald-300 px-4 py-2 rounded-full transition duration-200"
+                     >
+                       ← Back to White Wines
+                     </Link>
+                   </div>
+                 </div>
+               </div>
+             );
+           }

@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import JoshCab from "../../../assets/wineImages/joshcellars.jpg";
+import VictoriaChianti from "../../../assets/wineImages/victoria.jpg";
+import HessPinot from "../../../assets/wineImages/hesspinot.jpg";
+import HedgesCMSRB from "../../../assets/wineImages/hedgescmsrb.jpg";
 
 export default function RedsBTG() {
   const redWines = [
     {
       name: "Josh Cellars Cabernet Sauvignon",
+      image: JoshCab,
       description:
         "Blackberry, toasted hazelnut, and cinnamon, complemented by hints of vanilla and toasted oak.",
       profile: "Full-bodied, bold yet smooth.",
@@ -12,6 +17,7 @@ export default function RedsBTG() {
     },
     {
       name: "Victoria Chianti",
+      image: VictoriaChianti,
       description:
         "Notes of red and black cherry, violet, iris, wild herbs, and savory spice.",
       profile: "Full-bodied, fruity, with a hint of earthiness.",
@@ -19,6 +25,7 @@ export default function RedsBTG() {
     },
     {
       name: "Hess Select Pinot Noir",
+      image: HessPinot,
       description:
         "Aromas of raspberry, rose petals, and black tea. Rich red raspberries and black plum flavors.",
       profile: "Silky tannins, medium body, bright acidity.",
@@ -26,6 +33,7 @@ export default function RedsBTG() {
     },
     {
       name: "Hedges CMS Red Blend",
+      image: HedgesCMSRB,
       description:
         "Merlot dominant blend with red raspberry, blackberry, cocoa, and dried herbs.",
       profile: "Medium-bodied, long finish, spice and fruit balanced.",
@@ -57,18 +65,19 @@ export default function RedsBTG() {
               className="bg-black bg-opacity-60 rounded-xl border border-emerald-600 shadow-lg"
             >
               <button
-                onClick={() => toggleExpand(index)}
-                className="w-full flex justify-between items-center p-4 font-serif text-xl font-bold text-emerald-300"
-              >
-                {wine.name}
-                <span
-                  className={`text-xl font-bold transition ${
-                    expandedIndex === index ? "text-emerald-400" : "text-gray-300"
-                  }`}
-                >
-                  {expandedIndex === index ? "−" : "+"}
-                </span>
-              </button>
+  onClick={() => toggleExpand(index)}
+  className="w-full flex justify-between items-center p-4 font-serif text-xl font-bold text-emerald-300"
+>
+  <span className="flex-1 text-left">{wine.name}</span>
+  <img src={wine.image} alt={wine.name} className="w-24 h-auto rounded-md shadow-md mx-4" />
+  <span
+    className={`text-xl font-bold transition ${
+      expandedIndex === index ? "text-emerald-400" : "text-gray-300"
+    }`}
+  >
+    {expandedIndex === index ? "−" : "+"}
+  </span>
+</button>
               {expandedIndex === index && (
                 <div className="px-6 pb-6 text-gray-300 font-mono space-y-2">
                   <p><span className="text-emerald-300 font-bold">Tasting Notes:</span> {wine.description}</p>

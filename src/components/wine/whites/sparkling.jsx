@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 //import wineBG from "../../../assets/BGimages/winebg.jpg"; // Optional background
+import PerrierJouet from "../../../assets/wineImages/perrierjouet.jpg";
+import NicolasFeuillatte from "../../../assets/wineImages/nicolasf.jpg";
+import JoshCellars from "../../../assets/wineImages/joshprosecco.jpg";
+import Schramsberg from "../../../assets/wineImages/schramsberg.jpg";
+import VillaSparina from "../../../assets/wineImages/villasparinaspk.jpg";
 
 export default function Sparkling() {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -8,28 +13,43 @@ export default function Sparkling() {
   const sparklingWines = [
     {
       name: "Perrier Jouet, Champagne Grand Brut, France",
+      image: PerrierJouet,
       description:
-        "Blend of Pinot Noir, Pinot Meunier, and Chardonnay, aromas of white flowers, citrus, and stone fruits, palate with notes of honey, brioche, and vanilla. The fine bubbles and smooth finish make it a great choice for celebrations or pairing with seafood, light dishes, and creamy cheeses. $250",
+        "Blend of Pinot Noir, Pinot Meunier, and Chardonnay, aromas of white flowers, citrus, and stone fruits, palate with notes of honey, brioche, and vanilla. The fine bubbles and smooth finish make it a great choice for celebrations or pairing with seafood, light dishes, and creamy cheeses.",
+      price: 250,
+      website: "https://www.perrier-jouet.com/en-us/champagnes/grand-brut"
     },
     {
       name: "Nicolas Feuillatte ‘Reserve’ Brut, Champagne, France",
+      image: NicolasFeuillatte,
       description:
-        "Very recognizable brand name, high acidity and high fizz lead to a bold flavor. Prominent flavors of tree fruits and citrus with a toasty vanilla finish leading to a creamy texture. $75",
+        "Very recognizable brand name, high acidity and high fizz lead to a bold flavor. Prominent flavors of tree fruits and citrus with a toasty vanilla finish leading to a creamy texture.",
+      price: 75,
+      website: "https://www.nicolas-feuillatte.com/us/champagne/8-reserve-exclusive-brut-3282946006835.html"
     },
     {
-      name: "Josh Cellars, Rosé Prosecco, Veneto, Italy",
+      name: "Josh Cellars, Prosecco, Veneto, Italy",
+      image: JoshCellars,
       description:
-        "Refreshing acidity, notes of wild berries and blackberries with a strong effervescence. $60",
+        "Refreshing acidity, notes of wild berries and blackberries with a strong effervescence.",
+      price: 60,
+      website: "https://www.joshcellars.com/products/josh-cellars-prosecco"
     },
     {
       name: "Schramsberg ‘Blanc de Blanc’, North Coast, CA 2019",
+      image: Schramsberg,
       description:
-        "Aromas of grapefruit, lime, green apple, and apricot combined with tastes of yeast, flowers, and honey lead to a crisp and lingering acidic finish. $115",
+        "Aromas of grapefruit, lime, green apple, and apricot combined with tastes of yeast, flowers, and honey lead to a crisp and lingering acidic finish.",
+      price: 115,
+      website: "https://shop.schramsberg.com/SHOP.AMS?LEVEL=BOT&PART=BE19"
     },
     {
       name: "Villa Sparina Brut, Gavi, Piedmont, Italy",
+      image: VillaSparina,
       description:
-        "This sparkling wine has a less bold and less acidic profile than the others we serve. Light notes of apple and pear shine through, with earthy, yeasty complexity. $85",
+        "This sparkling wine has a less bold and less acidic profile than the others we serve. Light notes of apple and pear shine through, with earthy, yeasty complexity.",
+      price: 85,
+      website: "https://www.villasparinaresort.it/en/wine/wines/25-0.html"
     },
   ];
 
@@ -120,9 +140,34 @@ export default function Sparkling() {
                 </div>
               </button>
               {expandedIndex === index && (
-                <p className="text-gray-300 text-sm mt-3 leading-relaxed transition duration-300 ease-in-out">
-                  {wine.description}
-                </p>
+                <div className="px-6 pb-6 text-gray-300 font-mono space-y-2">
+<img
+  src={wine.image}
+  alt={wine.name}
+  className="w-32 h-auto rounded-lg shadow-md mx-auto"
+/>
+
+{wine.website && (
+  <p className="text-center mt-2">
+    <a
+      href={wine.website}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-emerald-300 underline hover:text-emerald-200 text-sm"
+    >
+      Visit Wine Website
+    </a>
+  </p>
+)}
+
+<p>
+  <span className="text-emerald-300 font-bold">Tasting Notes:</span> {wine.description}
+  <br />
+  <br />
+  <span className="text-emerald-400 font-semibold"> Price: ${wine.price}</span>
+
+</p>
+              </div>
               )}
             </div>
           ))}

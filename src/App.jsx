@@ -15,6 +15,9 @@ import Chardonnay from "./components/wine/whites/chardonnay";
 import SauvBlanc from "./components/wine/whites/sauvblanc";
 import InterestingWhites from "./components/wine/whites/interestingwhites";
 import Pairing from "./components/wine/pairing/pairing";
+import RedsPairBTG from "./components/wine/pairing/redspair";
+import WhitesPairBTG from "./components/wine/pairing/whitespair";
+import SparklingPair from "./components/wine/pairing/sparklingpair";
 import StartersPair from "./components/wine/pairing/starterspair";
 import LettucesPair from "./components/wine/pairing/lettucespair";
 import CrustsPair from "./components/wine/pairing/crustspair";
@@ -72,11 +75,14 @@ export default function App() {
         <Route path="/wine/red/tuscany" element={<Tuscany />} />
         <Route path="/wine/red/piedmont" element={<Piedmont />} />
         <Route path="/wine/red/interestingreds" element={<InterestingReds />} />
-            <Route path="/pairing" element={<Pairing />} />
-            <Route path="/pairing/starterspair" element={<StartersPair />} />
-            <Route path="/pairing/lettucespair" element={<LettucesPair />} />
-            <Route path="/pairing/crustspair" element={<CrustsPair />} />
-            <Route path="/pairing/holdmepair" element={<HoldMePair />} />
+        <Route path="/pairing" element={<Pairing />} />
+        <Route path="/pairing/redspair" element={<RedsPairBTG />} />
+        <Route path="/pairing/whitespair" element={<WhitesPairBTG />} />
+        <Route path="/pairing/sparklingpair" element={<SparklingPair />} />
+        <Route path="/pairing/starterspair" element={<StartersPair />} />
+        <Route path="/pairing/lettucespair" element={<LettucesPair />} />
+        <Route path="/pairing/crustspair" element={<CrustsPair />} />
+        <Route path="/pairing/holdmepair" element={<HoldMePair />} />
         <Route path="/pairing/pastaspair" element={<PastasPair />} />
         <Route path="/pairing/mainspair" element={<MainsPair />} />
         <Route path="/pairing/sidespair" element={<SidesPair />} />

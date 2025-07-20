@@ -12,6 +12,11 @@ export default function Pairing() {
     { name: "Sides", path: "/pairing/sidespair" },
     { name: "Desserts", path: "/pairing/dessertspair" }
   ];
+  const winecategories = [
+    { name: "Whites", path: "/pairing/whitespair" },
+    { name: "Reds", path: "/pairing/redspair" },
+    { name: "Sparkling", path: "/pairing/sparklingpair" },
+  ];
 
   const pairingBasics = [
     {
@@ -72,6 +77,22 @@ export default function Pairing() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
             {categories.map(({ name, path }) => (
+              <Link
+                key={name}
+                to={path}
+                className="block bg-black bg-opacity-60 border border-emerald-400 text-emerald-200 rounded-xl shadow hover:bg-emerald-800 transition px-6 py-4 font-mono font-bold text-center"
+              >
+                {name}
+              </Link>
+            ))}
+          </div>
+        </div>
+        <div className="pt-12">
+          <h2 className="text-3xl font-serif font-bold text-emerald-300 text-center mb-6">
+            Explore Pairings by Wines
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {winecategories.map(({ name, path }) => (
               <Link
                 key={name}
                 to={path}

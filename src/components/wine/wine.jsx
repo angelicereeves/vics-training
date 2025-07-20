@@ -23,6 +23,12 @@ export default function WineHome() {
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-6 pt-6">
+            <Link
+            to="/bytheglass"
+            className="px-6 py-3 bg-emerald-700 text-white font-bold rounded-full shadow-lg hover:bg-emerald-600 transition"
+          >
+            By the Glass Wines
+          </Link>
           <Link
             to="/wine/white"
             className="px-6 py-3 bg-emerald-500 text-black font-bold rounded-full shadow-lg hover:bg-emerald-400 transition"
@@ -35,12 +41,7 @@ export default function WineHome() {
           >
             BTB Red Wines
           </Link>
-                    <Link
-            to="/bytheglass"
-            className="px-6 py-3 bg-emerald-700 text-white font-bold rounded-full shadow-lg hover:bg-emerald-600 transition"
-          >
-            By the Glass Wines
-          </Link>
+
                     <Link
             to="/pairing"
             className="px-6 py-3 bg-emerald-700 text-white font-bold rounded-full shadow-lg hover:bg-emerald-600 transition"

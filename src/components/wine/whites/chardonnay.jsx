@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 //import wineBG from "../../../assets/BGimages/winebg.jpg";
 import { Link } from "react-router-dom";
+import FarNiente from "../../../assets/wineImages/farniente.jpg";
+import Vougriere from "../../../assets/wineImages/vougriere.jpg";
+import HessCollectionPanthera from "../../../assets/wineImages/hesscollectionpanthera.jpg";
+import WilliamFevre from "../../../assets/wineImages/williamfevre.jpg";
+import LaCrema from "../../../assets/wineImages/lacremachard.jpg";
+import PatzHall from "../../../assets/wineImages/patznhall.jpg";
 
 
 export default function Chardonnay() {
@@ -9,33 +15,51 @@ export default function Chardonnay() {
   const chardonnayWines = [
     {
       name: "Far Niente, Napa Valley, CA 2022",
+      image: FarNiente,
       description:
-        "Very recognizable winery. Tropical aromas of citrus and melon, melding with notes of toasted oak and perfume. Leading to a clean and refreshing finish. Most prominent notes are oaky, tree fruit, and citrus. $145",
+        "Very recognizable winery. Tropical aromas of citrus and melon, melding with notes of toasted oak and perfume. Leading to a clean and refreshing finish. Most prominent notes are oaky, tree fruit, and citrus.",
+      price: 145,
+      website: "https://farniente.com/shop/wines/2022-far-niente-chardonnay-napa-valley?id=001-CH0223W",
     },
     {
       name: "Vougriere ‘Terres de Familie’, Burgundy, France 2018",
+      image: Vougriere,
       description:
-        "Very dry, medium acidity, and medium to high boldness with notes of apricots, oak, but not too buttery. $90",
+        "Very dry, medium acidity, and medium to high boldness with notes of apricots, oak, but not too buttery.",
+      price: 90,
+      website: "https://onshorecellars.com/products/domaine-de-la-vougeraie-terres-da-famille-bourgogne-chardonnay-2?srsltid=AfmBOopl2LrE_RmPt4fDcmtbbVjcqFDKPaXCGhwNov9n3ag-p5o_fX_T",
     },
     {
       name: "Hess Collection Panthera, Russian River Valley 2023",
+      image: HessCollectionPanthera,
       description:
-        "Full-bodied and richly textured with medium to high acidity. Prominent notes of ripe stone fruit (peach, apricot), lemon curd, and crème brûlée layered with toasted oak, vanilla, and a touch of flinty minerality. Smooth and buttery, but balanced by freshness. $70",
+        "Full-bodied and richly textured with medium to high acidity. Prominent notes of ripe stone fruit (peach, apricot), lemon curd, and crème brûlée layered with toasted oak, vanilla, and a touch of flinty minerality. Smooth and buttery, but balanced by freshness.",
+      price: 70,
+      website: "https://www.hessperssonestates.com/product/2023-panthera-chardonnay-russian-river-valley/",
     },
     {
       name: "William Fevre ‘Champs Royaux’ Chablis, Burgundy, France 2022",
+      image: WilliamFevre,
       description:
-        "Medium boldness, dry, and higher acidity lead to heavy notes of citrus and tree fruits with earthy and mineral tones on the long finish. Flavors of melon, butter, oak and lemon. $75",
+        "Medium boldness, dry, and higher acidity lead to heavy notes of citrus and tree fruits with earthy and mineral tones on the long finish. Flavors of melon, butter, oak and lemon.",
+      price: 75,
+      website: "https://vintus.com/wines/william-fevre-chablis-champs-royaux/william-fevre-chablis-champs-royaux-2022/",
     },
     {
       name: "La Crema, Sonoma Coast, CA 2023",
+      image: LaCrema,
       description:
-        "Big and bold flavors, medium dry to sweet ratio with medium acidity. Floral, oaky, citrus, tree fruits, white stone fruits, and melon notes lead to a rich texture, balanced acidity, and a lingering finish. $70",
+        "Big and bold flavors, medium dry to sweet ratio with medium acidity. Floral, oaky, citrus, tree fruits, white stone fruits, and melon notes lead to a rich texture, balanced acidity, and a lingering finish.",
+      price: 70,
+      website: "https://www.lacrema.com/wine/sonoma-coast-chardonnay/"
     },
     {
       name: "Patz & Hall, Russian River Valley, CA 2021",
+      image: PatzHall,
       description:
-        "Very bold, medium dry to sweet ratio and medium acidity. Aromas of lemon. Passionfruit, butter, and oak with flavors of pineapple, finished with acidity and minerality. $75",
+        "Very bold, medium dry to sweet ratio and medium acidity. Aromas of lemon. Passionfruit, butter, and oak with flavors of pineapple, finished with acidity and minerality.",
+      price: 75,
+      website: "https://www.patzhall.com/product/2022-sonoma-coast-chardonnay1/"
     },
   ];
 
@@ -117,9 +141,34 @@ export default function Chardonnay() {
                 </div>
               </button>
               {expandedIndex === index && (
-                <p className="text-gray-300 text-sm mt-3 leading-relaxed transition duration-300 ease-in-out">
-                  {wine.description}
-                </p>
+                <div className="px-6 pb-6 text-gray-300 font-mono space-y-2">
+<img
+  src={wine.image}
+  alt={wine.name}
+  className="w-32 h-auto rounded-lg shadow-md mx-auto"
+/>
+
+{wine.website && (
+  <p className="text-center mt-2">
+    <a
+      href={wine.website}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-emerald-300 underline hover:text-emerald-200 text-sm"
+    >
+      Visit Wine Website
+    </a>
+  </p>
+)}
+
+<p>
+  <span className="text-emerald-300 font-bold">Tasting Notes:</span> {wine.description}
+  <br />
+  <br />
+  <span className="text-emerald-400 font-semibold"> Price: ${wine.price}</span>
+
+</p>
+              </div>
               )}
             </div>
           ))}

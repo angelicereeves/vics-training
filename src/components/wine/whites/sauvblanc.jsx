@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import LaCremaSB from "../../../assets/wineImages/lacremasauvb.jpg";
+import HubertB from "../../../assets/wineImages/hubertbro.jpg";
+import EchoBay from "../../../assets/wineImages/echobay.jpg";
+import FowlesSB from "../../../assets/wineImages/fowlessb.jpg";
+import RoundPond from "../../../assets/wineImages/roundpond.jpg";
 
 export default function SauvBlanc() {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -7,33 +12,43 @@ export default function SauvBlanc() {
   const SauvBlancWines = [
     {
       name: "La Crema, Sonoma Coast, CA 2023",
+      image: LaCremaSB,
       description:
         "Medium boldness, dry, with medium to high acidity. Notes of tree fruits, citrus, and vegetal (things like fresh cut grass and straw). Fresh and light with a quick finish.",
-      price: "$60",
+      price: "60",
+      website: "https://www.lacrema.com/wines/sonoma-coast-sauvignon-blanc/",
     },
     {
       name: "Hubert Brochard Sancerre, Tradition Loire, France 2023",
+      image: HubertB,
       description:
         "Light to medium body, dry, with medium to high acidity. Heavy notes of citrus, tree fruits, and finishes with earthy and mineraly notes and a tart flavor.",
-      price: "$90",
+      price: "90",
+      website: "https://vintus.com/wp-content/uploads/2024/06/Sancerre-Blanc-2023-1.pdf",
     },
     {
       name: "Echo Bay Marlborough, New Zealand 2023",
+      image: EchoBay,
       description:
         "Light to medium bodied and boldness, dry, high acidity. Notes of citrus (grapefruit, lemon, orange), tropical flavors, and tree fruits. Traditional New Zealand Sauvignon Blanc.",
-      price: "$65",
+      price: "65",
+      website: "https://www.onestopwineshop.com/product/echo-bay-sauvignon-blanc",
     },
     {
       name: "Fowles Winery Farm to Table, Victoria, Australia 2022",
+      image: FowlesSB,
       description:
         "Fruit forward yet fresh, with lively flavours of passionfruit, mixed tropical fruits and a burst of lemon citrus with a refreshing, dry, green apple crunch on the finish.",
-      price: "$60",
+      price: "60",
+      website: "https://www.fowleswine.com/product/farm-to-table-sauvignon-blanc/",
     },
     {
       name: "Round Pond, Napa Valley, CA 2023",
+      image: RoundPond,
       description:
         "Distinctive touch of salinity, bright zesty flavors of citrus, passionfruit, lychee, and basil. Subtle and understated, yet very balanced with nice acidity.",
-      price: "$75",
+      price: "75",
+      website: "https://www.roundpond.com/product/estate-sauvignon-blanc",
     },
   ];
 
@@ -85,7 +100,7 @@ export default function SauvBlanc() {
 
         <div className="space-y-6">
           {SauvBlancWines.map((wine, index) => (
-            <div
+<div
               key={index}
               className="bg-gray-900 bg-opacity-80 p-6 rounded-xl shadow-lg border border-emerald-500"
             >
@@ -109,9 +124,34 @@ export default function SauvBlanc() {
                 </div>
               </button>
               {expandedIndex === index && (
-                <p className="text-gray-300 text-sm mt-3 leading-relaxed transition duration-300 ease-in-out">
-                  {wine.description}
-                </p>
+                <div className="px-6 pb-6 text-gray-300 font-mono space-y-2">
+<img
+  src={wine.image}
+  alt={wine.name}
+  className="w-32 h-auto rounded-lg shadow-md mx-auto"
+/>
+
+{wine.website && (
+  <p className="text-center mt-2">
+    <a
+      href={wine.website}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-emerald-300 underline hover:text-emerald-200 text-sm"
+    >
+      Visit Wine Website
+    </a>
+  </p>
+)}
+
+<p>
+  <span className="text-emerald-300 font-bold">Tasting Notes:</span> {wine.description}
+  <br />
+  <br />
+  <span className="text-emerald-400 font-semibold"> Price: ${wine.price}</span>
+
+</p>
+              </div>
               )}
             </div>
           ))}

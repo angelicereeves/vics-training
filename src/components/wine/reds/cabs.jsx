@@ -1,5 +1,18 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import AmaviCellars from "../../../assets/wineImages/amavicellars.jpg";
+import AustinHope from "../../../assets/wineImages/austinhope.jpg";
+import ChateauSegla from "../../../assets/wineImages/chateausegla.jpg";
+import ChateauDeCome from "../../../assets/wineImages/chateaudecome.jpg";
+import HedgesCuvee from "../../../assets/wineImages/hedgescuvee.jpg";
+import HeitzCellar from "../../../assets/wineImages/heitz.jpg";
+import HessCollectionIronCorral from "../../../assets/wineImages/hesscollectionironcorral.jpg";
+import HessCollectionLionTamer from "../../../assets/wineImages/hesscollectionliontamer.jpg";
+import JustinIsosceles from "../../../assets/wineImages/justinisosceles.jpg";
+import LeRival from "../../../assets/wineImages/lerival.jpg";
+import Caymus from "../../../assets/wineImages/caymus.jpg";
+import SantaRita from "../../../assets/wineImages/santarita.jpg";
+import Turnbull from "../../../assets/wineImages/turnbull.jpg";
 
 export default function Cabs() {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -7,68 +20,107 @@ export default function Cabs() {
   const cabWines = [
     {
       name: "Amavi Cellars, Walla Walla, WA 2022",
+      image: AmaviCellars,
       description:
         "Big bold flavors, full bodied, acidic, dry, and a complex tannic structure lends to notes of black fruits (such as blackberry, black cherry, plum), earthy and oaky notes. A bit drier and more acidic than a traditional Washington cabernet. $85",
+      price: 85,
+      website: "https://www.amavicellars.com/wine/2022-cabernet-sauvignon-6lt",
     },
     {
       name: "Austin Hope, Paso Robles, CA 2020",
+      image: AustinHope,
       description:
         "Very bold cabernet with a slightly toned down tannin profile, semi dry to dry with medium acidity. Heavy notes of vanilla, oak, chocolate, black fruits, leather, and more earthy notes. $160",
+      price: 160,
+      website: "https://www.austinhope.com/product/2020-Austin-Hhttps://hopefamilywines.com/product/austin-hope-cabernet-sauvignon-2020/?srsltid=AfmBOoqP-LRZdpCcr2D1o_Kf3GwMT-u45h_oYriw_yCtnFXLRAkbWjTv",
     },
     {
       name: "Chateau Segla, Margaux, Bordeaux, France 2015",
+      image: ChateauSegla,
       description:
         "Medium to full bodied with complex tannins, dry and medium acidity. Cassis and spicy overtones develop as it ages. One of the best in its French AOC class. $120",
+      price: 120,
+      website: "https://www.chateau-segla.com/en/wines/chateau-sehttps://winebow-files.s3.amazonaws.com/public/vintage/techsheets/438433_Segla_Segla-Margaux_2015_4.pdf?VersionId=4NdFGBBWwtPt2IR_.GyhpHJyezGX5d4D",
     },
     {
       name: "Chateau De Come, Margaux, Bordeaux, France 2016",
+      image: ChateauDeCome,
       description:
         "Medium to full bodied, bold, dry, and structured. Black fruit and spice with red fruit aromas. $70",
+      price: 70,
+      website: "https://www.closdesmillesimes.com/23186-archives-chateau-de-come-2016-en.html",
     },
     {
       name: "Hedges ‘La Haute Cuvee’, Red Mountain, WA 2018",
+      image: HedgesCuvee,
       description:
         "Medium to full bodied, refined tannins, dry and balanced with blueberry, blackcurrant, mint, thyme, and tea. Long finish, ideal with red meats. $145",
+      price: 145,
+      website: "https://hedgesfamilyestate.orderport.net/product-details/0475/2018-LA-HAUTE-CUVEE",
     },
     {
       name: "Heitz Cellar ‘Lot C-91’, Napa Valley, CA 2017",
+      image: HeitzCellar,
       description:
         "Single vineyard Napa powerhouse. Fuller bodied, dry, rich tannins, medium acidity, notes of cherry, blueberry, eucalyptus, oak. $295",
+      price: 295,
+      website: "https://heitzcellar.com/purchase-2/2016-lot-c-91/?srsltid=AfmBOorzgBDMdgW9minc9D4goBYFuoLQNoT11fpKHQAmAQjHUpLDntAn",
     },
     {
       name: "Hess Collection Iron Corral, Napa Valley, CA 2022",
+      image: HessCollectionIronCorral,
       description:
         "Cabernet blend (92% Cab). Full-bodied, firm tannins, medium-high acidity, bold black fruit with espresso, chocolate, mocha spice. $170",
+      price: 170,
+      website: "https://www.hessperssonestates.com/wp-content/uploads/2025/01/22_HC_IC_WMN.pdf",
     },
     {
       name: "Hess Collection Lion Tamer, Napa Valley, CA 2022",
+      image: HessCollectionLionTamer,
       description:
         "Cabernet blend with Malbec and Petite Sirah. Full-bodied, polished tannins, rich with blackberry, blueberry, cocoa, and sweet oak spice. $95",
+      price: 95,
+      website: "https://www.hessperssonestates.com/product/2022-lion-tamer-red-blend-napa-valley/",
     },
     {
       name: "Justin ‘Isosceles’, Paso Robles, CA 2021",
+      image: JustinIsosceles,
       description:
         "Big, bold, dry, medium acidity, notes of oak, vanilla, black and red fruits. Silky finish. $125",
+      price: 125,
+      website: "https://www.justinwine.com/product/2021-isosceles-750?srsltid=AfmBOoocpeSocHy0qCqOmhjuXD6Iqo_xvKe66ExYf-CWGacPQei7N5R4",
     },
     {
       name: "Le Rival Lussac-Saint-Emilion, France 2015",
+      image: LeRival,
       description:
         "Mint, licorice, flint, black cherry aromas. Merlot-dominant, juicy finish with cocoa and dark fruits. $120",
+      price: 120,
+      website: "https://opimian.ca/le-rival-aoc-lussac-saint-emilion-11838/",
     },
     {
       name: "Caymus 50th Anniversary Cabernet, Napa Valley, CA 2022",
+      image: Caymus,
       description:
         "Rich, full-bodied, smooth with bold ripe blackberries, cherries, cassis, chocolate, vanilla, and spice. Luxurious finish. $190",
+      price: 190,
+      website: "https://www.caymus.com/wp-content/uploads/2024/06/2022-Caymus-Cab-50th-tasting-notes.pdf",
     },
     {
       name: "Santa Rita Medella Real, Maipo Valley, Chile 2021",
+      image: SantaRita,
       description:
         "Chilean cab with big, bold, oaky and earthy flavors. Complex tannins, full body, dry. Let it breathe or decant. $65",
+      price: 65,
+      website: "https://www.santarita.com/en/vinos/medalla-real-gold-medal-cabernet-sauvignon/",
     },
     {
       name: "Turnbull ‘Estate’, Napa Valley, CA 2021",
+      image: Turnbull,
       description:
         "Bold body, dry, medium acidity, high tannin. Black fruits, oak, leather. Napa value wine. Let breathe. $120",
+      price: 120,
+      website: "https://www.turnbullwines.com/wp-content/uploads/2024/01/2021-Napa-Valley-Cabernet-Sauvignon.pdf",
     },
   ];
 
@@ -158,46 +210,71 @@ export default function Cabs() {
         <div className="space-y-6">
           {cabWines.map((wine, index) => (
             <div
-              key={index}
-              className="bg-gray-900 bg-opacity-80 p-6 rounded-xl shadow-lg border border-emerald-500"
-            >
-              <button
-                onClick={() =>
-                  setExpandedIndex(expandedIndex === index ? null : index)
-                }
-                className="w-full text-left focus:outline-none"
-              >
-                <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-bold text-white">{wine.name}</h3>
-                  <span
-                    className={`text-xl font-bold transition ${
-                      expandedIndex === index
-                        ? "text-emerald-400"
-                        : "text-gray-300"
-                    }`}
-                  >
-                    {expandedIndex === index ? "−" : "+"}
-                  </span>
+                          key={index}
+                          className="bg-gray-900 bg-opacity-80 p-6 rounded-xl shadow-lg border border-emerald-500"
+                        >
+                          <button
+                            onClick={() =>
+                              setExpandedIndex(expandedIndex === index ? null : index)
+                            }
+                            className="w-full text-left focus:outline-none"
+                          >
+                            <div className="flex items-center justify-between">
+                              <h3 className="text-lg font-bold text-white">{wine.name}</h3>
+                              <span
+                                className={`text-xl font-bold transition ${
+                                  expandedIndex === index
+                                    ? "text-emerald-400"
+                                    : "text-gray-300"
+                                }`}
+                              >
+                                {expandedIndex === index ? "−" : "+"}
+                              </span>
+                            </div>
+                          </button>
+                          {expandedIndex === index && (
+                            <div className="px-6 pb-6 text-gray-300 font-mono space-y-2">
+            <img
+              src={wine.image}
+              alt={wine.name}
+              className="w-32 h-auto rounded-lg shadow-md mx-auto"
+            />
+            
+            {wine.website && (
+              <p className="text-center mt-2">
+                <a
+                  href={wine.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-emerald-300 underline hover:text-emerald-200 text-sm"
+                >
+                  Visit Wine Website
+                </a>
+              </p>
+            )}
+            
+            <p>
+              <span className="text-emerald-300 font-bold">Tasting Notes:</span> {wine.description}
+              <br />
+              <br />
+              <span className="text-emerald-400 font-semibold"> Price: ${wine.price}</span>
+            
+            </p>
+                          </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+            
+                    <div className="text-center pt-10">
+                      <Link
+                        to="/wine/red"
+                        className="inline-block text-sm font-semibold text-emerald-300 hover:text-white border border-emerald-300 px-4 py-2 rounded-full transition duration-200"
+                      >
+                        ← Back to Red Wines
+                      </Link>
+                    </div>
+                  </div>
                 </div>
-              </button>
-              {expandedIndex === index && (
-                <p className="text-gray-300 text-sm mt-3 leading-relaxed transition duration-300 ease-in-out">
-                  {wine.description}
-                </p>
-              )}
-            </div>
-          ))}
-        </div>
-
-        <div className="text-center pt-10">
-          <Link
-            to="/wine/red"
-            className="inline-block text-sm font-semibold text-emerald-300 hover:text-white border border-emerald-300 px-4 py-2 rounded-full transition duration-200"
-          >
-            ← Back to Red Wines
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
+              );
+            }
