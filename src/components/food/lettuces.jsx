@@ -1,6 +1,7 @@
 
   import React, { useState } from "react";
     import { Link } from "react-router-dom";
+import BGpic from "../../assets/BGimages/food8.jpg";
 
 export default function Starters() {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -58,8 +59,11 @@ export default function Starters() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-white text-white py-16 px-6">
-      <div className="max-w-6xl mx-auto">
+     <div
+          className="min-h-screen bg-cover bg-center bg-no-repeat relative text-white"
+          style={{ backgroundImage: `url(${BGpic})` }}
+        >
+      <div className="max-w-6xl mx-auto py-10">
         <Link
             to="/food"
             className="inline-block mb-6 px-5 py-2 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold shadow-md transition duration-300"
@@ -67,7 +71,7 @@ export default function Starters() {
         ← Back to Full Menu
         </Link>
 
-        <h2 className="text-4xl font-serif font-bold text-emerald-400 border-b border-emerald-400 pb-4 mb-10">
+        <h2 className="text-4xl font-mono font-bold text-emerald-400 border-b border-emerald-400 pb-4 mb-10">
           Lettuces and Soups
         </h2>
 
@@ -82,7 +86,7 @@ export default function Starters() {
                 className="w-full text-left focus:outline-none"
               >
                 <div className="flex justify-between items-center">
-                  <h3 className="text-lg font-bold text-emerald-300">{dish.name}</h3>
+                  <h3 className="text-lg font-bold font-mono text-emerald-300">{dish.name}</h3>
                   <span className={`text-xl font-bold transition ${expandedIndex === index ? "text-emerald-400" : "text-gray-300"}`}>
                     {expandedIndex === index ? "−" : "+"}
                     </span>

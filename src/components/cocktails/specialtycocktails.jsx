@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SpecialtycocktailsBg from "../../assets/BGimages/specialtycocktailsbg.jpg";
+import SpecialtycocktailsBg from "../../assets/BGimages/bar13.jpg";
 import { useState } from "react";
 
 const specialtyCocktails = [
@@ -85,12 +85,18 @@ export default function SpecialtyCocktails() {
 
       {/* Main Content */}
       <div className="relative z-10 max-w-6xl mx-auto text-center space-y-10">
-        <h1 className="text-5xl font-serif font-bold text-emerald-300 drop-shadow-lg">
-          🍸 Vic’s Specialty Cocktails
+        <Link
+          to="/cocktails"
+          className="inline-block mt-16 px-6 py-3 bg-white text-emerald-800 font-bold rounded-full shadow-lg hover:bg-emerald-100 transition"
+        >
+          ← Back to Cocktails
+        </Link>
+        <h1 className="text-5xl font-mono font-bold text-emerald-300 drop-shadow-lg">
+          Vic’s Specialty Cocktails
         </h1>
 
         <p className="text-lg font-mono font-bold text-emerald-100">
-          Dive into our curated list of house specialties cocktails.
+          Dive into our curated list of house specialties cocktails and dessert cocktails.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-12 text-left">

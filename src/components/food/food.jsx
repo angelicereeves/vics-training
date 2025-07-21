@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import foodHomeBg from "../../assets/BGimages/food6.jpg";  
+import foodHomeBg from "../../assets/BGimages/food10.jpg";  
 
 export default function Food() {
   const foodCategories = [
@@ -22,8 +22,8 @@ export default function Food() {
       
 
       <div className="relative z-10 max-w-5xl mx-auto text-center space-y-8 py-16 px-6">
-        <h1 className="text-5xl font-serif font-bold text-emerald-400 drop-shadow-md">
-          Vic’s Food Training
+        <h1 className="text-5xl font-mono font-bold text-emerald-400 drop-shadow-md">
+          Vic’s Food Menu
         </h1>
 
         <p className="text-lg font-mono font-semibold text-white-500">
@@ -35,7 +35,7 @@ export default function Food() {
             <Link
               key={cat.name}
               to={cat.path}
-              className="block bg-black bg-opacity-60 border border-emerald-500 rounded-xl p-5 text-emerald-300 font-bold text-lg shadow-md hover:bg-emerald-900 hover:text-white transition-all duration-300"
+              className="block bg-black bg-opacity-60 border border-emerald-500 rounded-xl p-5 text-emerald-300 font-bold font-mono text-lg shadow-md hover:bg-emerald-900 hover:text-white transition-all duration-300"
             >
               {cat.name}
             </Link>

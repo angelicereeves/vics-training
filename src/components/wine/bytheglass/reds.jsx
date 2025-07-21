@@ -4,6 +4,7 @@ import JoshCab from "../../../assets/wineImages/joshcellars.jpg";
 import VictoriaChianti from "../../../assets/wineImages/victoria.jpg";
 import HessPinot from "../../../assets/wineImages/hesspinot.jpg";
 import HedgesCMSRB from "../../../assets/wineImages/hedgescmsrb.jpg";
+import BGpic from "../../../assets/BGimages/bar19.jpg";
 
 export default function RedsBTG() {
   const redWines = [
@@ -48,9 +49,12 @@ export default function RedsBTG() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-emerald-900 text-white py-16 px-6">
+            <div
+              className="min-h-screen bg-cover bg-center bg-no-repeat text-white relative"
+              style={{ backgroundImage: `url(${BGpic})` }}
+            >
       <div className="max-w-5xl mx-auto space-y-12">
-        <h1 className="text-4xl font-serif font-bold text-emerald-400 border-b border-emerald-400 pb-4">
+        <h1 className="text-4xl font-mono font-bold text-emerald-400 border-b border-emerald-400 pb-4">
           Red Wines by the Glass
         </h1>
 
@@ -66,7 +70,7 @@ export default function RedsBTG() {
             >
               <button
   onClick={() => toggleExpand(index)}
-  className="w-full flex justify-between items-center p-4 font-serif text-xl font-bold text-emerald-300"
+  className="w-full flex justify-between items-center p-4 font-mono text-xl font-bold text-emerald-300"
 >
   <span className="flex-1 text-left">{wine.name}</span>
   <img src={wine.image} alt={wine.name} className="w-24 h-auto rounded-md shadow-md mx-4" />
@@ -91,9 +95,9 @@ export default function RedsBTG() {
 
         <Link
           to="/bytheglass"
-          className="inline-block mt-16 px-6 py-3 bg-white text-emerald-800 font-bold rounded-full shadow-lg hover:bg-emerald-100 transition"
+          className="inline-block mt-16 px-6 py-3 bg-white text-emerald-800 font-bold font-mono rounded-full shadow-lg hover:bg-emerald-100 transition"
         >
-          ← Back to By-the-Glass Menu
+          ← Back to By the Glass Menu
         </Link>
       </div>
     </div>

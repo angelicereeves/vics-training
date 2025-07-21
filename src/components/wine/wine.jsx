@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import wineBG from "../../assets/BGimages/winebg.jpg";
+import wineBG from "../../assets/BGimages/bar8.jpg";
 
 export default function WineHome() {
   return (
@@ -9,10 +9,10 @@ export default function WineHome() {
       style={{ backgroundImage: `url(${wineBG})` }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-70 z-0" />
+      <div className="absolute inset-0 bg-black bg-opacity-0 z-0" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 py-20 text-center space-y-8">
-        <h1 className="text-5xl font-serif font-bold text-emerald-400 drop-shadow-md">
+        <h1 className="text-5xl font-mono font-bold text-emerald-400 drop-shadow-md">
           Wine at Vic’s
         </h1>
 
@@ -25,26 +25,26 @@ export default function WineHome() {
         <div className="flex flex-col sm:flex-row justify-center gap-6 pt-6">
             <Link
             to="/bytheglass"
-            className="px-6 py-3 bg-emerald-700 text-white font-bold rounded-full shadow-lg hover:bg-emerald-600 transition"
+            className="px-6 py-3 bg-emerald-700 text-white font-mono font-bold rounded-full shadow-lg hover:bg-emerald-600 transition"
           >
             By the Glass Wines
           </Link>
           <Link
             to="/wine/white"
-            className="px-6 py-3 bg-emerald-700 text-white font-bold rounded-full shadow-lg hover:bg-emerald-400 transition"
+            className="px-6 py-3 bg-emerald-700 text-white font-mono font-bold rounded-full shadow-lg hover:bg-emerald-400 transition"
           >
             BTB White Wines
           </Link>
           <Link
             to="/wine/red"
-            className="px-6 py-3 bg-emerald-700 text-white font-bold rounded-full shadow-lg hover:bg-emerald-600 transition"
+            className="px-6 py-3 bg-emerald-700 text-white font-mono font-bold rounded-full shadow-lg hover:bg-emerald-600 transition"
           >
             BTB Red Wines
           </Link>
 
                     <Link
             to="/pairing"
-            className="px-6 py-3 bg-emerald-700 text-white font-bold rounded-full shadow-lg hover:bg-emerald-600 transition"
+            className="px-6 py-3 bg-emerald-700 text-white font-mono font-bold rounded-full shadow-lg hover:bg-emerald-600 transition"
           >
             Wine Pairing Guide
           </Link>

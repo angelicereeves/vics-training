@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-//import wineBG from "../../../assets/BGimages/winebg.jpg"; // Optional background
+import wineBG from "../../../assets/BGimages/bar20.jpg"; // Optional background
 import PerrierJouet from "../../../assets/wineImages/perrierjouet.jpg";
 import NicolasFeuillatte from "../../../assets/wineImages/nicolasf.jpg";
 import JoshCellars from "../../../assets/wineImages/joshprosecco.jpg";
@@ -54,13 +54,16 @@ export default function Sparkling() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-white text-white py-20 px-6">
+        <div
+              className="min-h-screen bg-cover bg-center bg-no-repeat text-white relative"
+              style={{ backgroundImage: `url(${wineBG})` }}
+            >
       <div className="max-w-5xl mx-auto space-y-14">
-        <h1 className="text-5xl font-serif font-bold text-emerald-400 border-b-4 border-emerald-400 pb-2 drop-shadow-md text-center">
+        <h1 className="text-5xl font-mono font-bold text-emerald-400 border-b-4 border-emerald-400 pb-2 drop-shadow-md text-center">
           Champagne and Sparkling
         </h1>
         <div className="bg-black bg-opacity-60 border border-emerald-500 rounded-2xl shadow-xl p-6 space-y-6">
-  <h2 className="text-3xl font-serif font-bold text-emerald-300">Champagne & Sparkling</h2>
+  <h2 className="text-3xl font-mono font-bold text-emerald-300">Champagne & Sparkling</h2>
 
   <p className="text-gray-300 font-mono">
     Most Champagnes have vibrant notes of citrus fruits (lemon, grapefruit, orange zest), tree fruits (green apple, pear, white peach), and aging flavors like toast, brioche, almond, or nuttiness. Rosé Champagnes include red fruit notes like strawberry and raspberry.
@@ -74,7 +77,7 @@ export default function Sparkling() {
     Excellent with light dishes: salmon, tuna, shellfish, soft cheeses, and pork. Try pairing with our clam pasta, salmon, or rigatoni carbonara.
   </p>
 
-  <h3 className="text-xl font-serif font-bold text-emerald-300 pt-4">How to Open Champagne</h3>
+  <h3 className="text-xl font-mono font-bold text-emerald-300 pt-4">How to Open Champagne</h3>
   <ul className="list-disc pl-6 text-gray-300 font-mono space-y-1">
     <li>Remove foil and unscrew the cage (six turns).</li>
     <li>Keep the cage on and hold the cork with a serviette for safety.</li>
@@ -127,7 +130,7 @@ export default function Sparkling() {
                 className="w-full text-left focus:outline-none"
               >
                 <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-bold text-white">{wine.name}</h3>
+                  <h3 className="text-lg font-mono font-bold text-white">{wine.name}</h3>
                   <span
                     className={`text-xl font-bold transition ${
                       expandedIndex === index

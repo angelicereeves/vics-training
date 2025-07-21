@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import BGpic from "../../../assets/BGimages/bar9.jpg";
 
 export default function Pairing() {
   const categories = [
@@ -46,9 +47,12 @@ export default function Pairing() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-emerald-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+    <div
+          className="min-h-screen bg-cover bg-center bg-no-repeat text-white relative"
+          style={{ backgroundImage: `url(${BGpic})` }}
+        >
       <div className="max-w-5xl mx-auto space-y-12">
-        <h1 className="text-5xl font-serif font-bold text-emerald-400 text-center drop-shadow-sm">
+        <h1 className="text-5xl font-mono font-bold text-emerald-400 text-center drop-shadow-sm">
           Wine Pairing Guide
         </h1>
         <p className="text-lg font-mono text-gray-300 text-center max-w-3xl mx-auto">
@@ -61,7 +65,7 @@ export default function Pairing() {
               key={index}
               className="bg-black bg-opacity-60 border-l-4 border-emerald-400 rounded-xl shadow p-6 hover:shadow-md transition"
             >
-              <h2 className="text-xl font-serif font-bold text-emerald-300 mb-2">
+              <h2 className="text-xl font-mono font-bold text-emerald-300 mb-2">
                 {item.title}
               </h2>
               <p className="text-sm text-gray-300 font-mono">
@@ -72,7 +76,7 @@ export default function Pairing() {
         </div>
 
         <div className="pt-12">
-          <h2 className="text-3xl font-serif font-bold text-emerald-300 text-center mb-6">
+          <h2 className="text-3xl font-mono font-bold text-emerald-300 text-center mb-6">
             Explore Pairings by Menu Section
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
@@ -88,7 +92,7 @@ export default function Pairing() {
           </div>
         </div>
         <div className="pt-12">
-          <h2 className="text-3xl font-serif font-bold text-emerald-300 text-center mb-6">
+          <h2 className="text-3xl font-mono font-bold text-emerald-300 text-center mb-6">
             Explore Pairings by Wines
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">

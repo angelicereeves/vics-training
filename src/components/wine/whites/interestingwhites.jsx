@@ -10,6 +10,7 @@ import LivioFelluga from "../../../assets/wineImages/liviofelluga.jpg";
 import JustinRose from "../../../assets/wineImages/justinrose.jpg";
 import AlbertBichotStVeran from "../../../assets/wineImages/albertbichotstveran.jpg";
 import Voskevaz from "../../../assets/wineImages/voskevaz.jpg";
+import wineBG from "../../../assets/BGimages/bar20.jpg";
 
 
 export default function InterestingWhites() {
@@ -121,13 +122,16 @@ function renderScale(metrics) {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-white text-white py-20 px-6">
+        <div
+              className="min-h-screen bg-cover bg-center bg-no-repeat text-white relative"
+              style={{ backgroundImage: `url(${wineBG})` }}
+            >
       <div className="max-w-5xl mx-auto space-y-14">
-        <h1 className="text-5xl font-serif font-bold text-emerald-400 border-b-4 border-emerald-400 pb-2 drop-shadow-md text-center">
+        <h1 className="text-5xl font-mono font-bold text-emerald-400 border-b-4 border-emerald-400 pb-2 drop-shadow-md text-center">
           Interesting Whites
         </h1>
         <div className="bg-black bg-opacity-60 text-white rounded-2xl shadow-lg p-6 space-y-6 border border-emerald-400 mt-10">
-  <h2 className="text-3xl font-serif font-bold text-emerald-300 mb-2">About Interesting Whites</h2>
+  <h2 className="text-3xl font-mono font-bold text-emerald-300 mb-2">About Interesting Whites</h2>
 
   {/* Gavi di Gavi */}
   <div>
@@ -216,7 +220,7 @@ function renderScale(metrics) {
                            className="w-full text-left focus:outline-none"
                          >
                            <div className="flex items-center justify-between">
-                             <h3 className="text-lg font-bold text-white">{wine.name}</h3>
+                             <h3 className="text-lg font-mono font-bold text-white">{wine.name}</h3>
                              <span
                                className={`text-xl font-bold transition ${
                                  expandedIndex === index

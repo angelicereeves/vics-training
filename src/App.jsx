@@ -44,7 +44,10 @@ import Liquor from "./components/liquor";
 import Cocktails from "./components/cocktails/cocktails";
 import SpecialtyCocktails from "./components/cocktails/specialtycocktails";
 import ClassicCocktails from "./components/cocktails/classiccocktails";
+import DessertCocktails from "./components/cocktails/dessertcocktails";
+import Mocktails from "./components/cocktails/mocktails";
 import ShowCocktails from "./components/cocktails/showcocktails/showcocktails";
+import SeasonalCocktails from "./components/cocktails/seasonalcocktails/seasonalcocktails"
 import Service from "./components/service";
 import Music from "./components/music";
 import Quiz from "./components/quiz";
@@ -99,7 +102,10 @@ export default function App() {
         <Route path="/cocktails" element={<Cocktails />} />
         <Route path="/cocktails/specialtycocktails" element={<SpecialtyCocktails />} />
         <Route path="/cocktails/classiccocktails" element={<ClassicCocktails />} />
+        <Route path="/cocktails/dessertcocktails" element={<DessertCocktails />} />
         <Route path="/cocktails/showcocktails/showcocktails" element={<ShowCocktails />} />
+        <Route path="/cocktails/mocktails" element={<Mocktails />} />
+        <Route path="/cocktails/seasonalcocktails/seasonalcocktails" element={<SeasonalCocktails />} />
         <Route path="/service" element={<Service />} />
         <Route path="/music" element={<Music />} />
         <Route path="/quiz" element={<Quiz />} />

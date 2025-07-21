@@ -4,6 +4,7 @@ import RuffinoProsecco from "../../../assets/wineImages/ruffinoprosecco.jpg";
 import RuffinoProseccoRose from "../../../assets/wineImages/ruffinoproseccorose.jpg";
 import PizzalatoSparklingMoscato from "../../../assets/wineImages/pizzolatospkmoscato.jpg";
 import PizzalatoSparklingPinotGrigio from "../../../assets/wineImages/pizzolatospkpinot.jpg";
+import BGpic from "../../../assets/BGimages/bar14.jpg";
 
 export default function SparklingsBTG() {
   const sparklingWines = [
@@ -49,13 +50,16 @@ export default function SparklingsBTG() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-emerald-900 text-white py-16 px-6">
-      <div className="max-w-5xl mx-auto space-y-12">
-        <h1 className="text-4xl font-serif font-bold text-emerald-400 border-b border-emerald-400 pb-4">
+            <div
+              className="min-h-screen bg-cover bg-center bg-no-repeat text-white relative"
+              style={{ backgroundImage: `url(${BGpic})` }}
+            >
+      <div className="max-w-5xl mx-auto space-y-12 back">
+        <h1 className="text-4xl font-mono font-bold text-emerald-400 border-b border-emerald-400 pb-4">
           Sparkling Wines by the Glass
         </h1>
 
-        <p className="text-lg font-mono text-gray-300">
+        <p className="text-lg font-mono font-bold text-emerald-400">
           Explore our sparkling selections offered by the glass — perfect to start your meal or elevate a celebration.
         </p>
 
@@ -67,7 +71,7 @@ export default function SparklingsBTG() {
             >
               <button
   onClick={() => toggleExpand(index)}
-  className="w-full flex justify-between items-center p-4 font-serif text-xl font-bold text-emerald-300"
+  className="w-full flex justify-between items-center p-4 text-xl font-mono font-bold text-emerald-300"
 >
   <span className="flex-1 text-left">{wine.name}</span>
   <img src={wine.image} alt={wine.name} className="w-24 h-auto rounded-md shadow-md mx-4" />
@@ -95,7 +99,7 @@ export default function SparklingsBTG() {
           to="/bytheglass"
           className="inline-block mt-16 px-6 py-3 bg-white text-emerald-800 font-bold rounded-full shadow-lg hover:bg-emerald-100 transition"
         >
-          ← Back to By-the-Glass Menu
+          ← Back to By the Glass Menu
         </Link>
       </div>
     </div>

@@ -23,9 +23,9 @@ export default function Navbar() {
           <img
             src={logo}
             alt="Vic's Logo"
-            className="w-10 h-10 object-contain"
+            className="w-15 h-12 object-contain"
           />
-          <div className="text-2xl font-serif italic text-emerald-400 tracking-wider">
+          <div className="text-2xl font-serif text-emerald-400 tracking-wider">
             Vic’s Italian Jazz Bistro
           </div>
         </div>
