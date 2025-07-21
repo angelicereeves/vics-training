@@ -13,6 +13,7 @@ import LeRival from "../../../assets/wineImages/lerival.jpg";
 import Caymus from "../../../assets/wineImages/caymus.jpg";
 import SantaRita from "../../../assets/wineImages/santarita.jpg";
 import Turnbull from "../../../assets/wineImages/turnbull.jpg";
+import wineBG from "../../../assets/BGimages/bar18.jpg";
 
 export default function Cabs() {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -125,13 +126,22 @@ export default function Cabs() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-white text-white py-20 px-6">
-      <div className="max-w-5xl mx-auto space-y-14">
-        <h1 className="text-5xl font-serif font-bold text-emerald-400 border-b-4 border-emerald-400 pb-2 drop-shadow-md text-center">
+       <div
+                     className="min-h-screen bg-cover bg-center bg-no-repeat text-white relative"
+                     style={{ backgroundImage: `url(${wineBG})` }}
+                   >
+      <div className="max-w-5xl mx-auto space-y-14 py-10">
+                        <Link
+                          to="/wine/red"
+                          className="inline-block text-sm font-mono font-semibold bg-emerald-400 text-black hover:text-white border border-emerald-300 px-4 py-2 rounded-full transition duration-200"
+                        >
+                          ← Back to Red Wines
+                        </Link>
+        <h1 className="text-5xl font-mono font-bold text-emerald-400 border-b-4 border-emerald-400 pb-2 drop-shadow-md text-center">
           Cabernet Sauvignon & Friends
         </h1>
         <div className="bg-black bg-opacity-60 text-white rounded-2xl shadow-lg p-6 space-y-4 border border-emerald-400 mt-10">
-  <h2 className="text-3xl font-serif font-bold text-emerald-300 mb-2">About Cabernet Sauvignon and Friends</h2>
+  <h2 className="text-3xl font-mono font-bold text-emerald-300 mb-2">About Cabernet Sauvignon and Friends</h2>
 
   <p className="text-sm font-mono text-gray-300 leading-relaxed">
     Cabernet Sauvignon is one of the most commonly recognized red wines, particularly in America. Napa Valley, CA is one of the largest producers of the cabernet sauvignon and cabernet franc grapes, leading to an extensive wine industry in the region.
@@ -269,7 +279,7 @@ export default function Cabs() {
                     <div className="text-center pt-10">
                       <Link
                         to="/wine/red"
-                        className="inline-block text-sm font-semibold text-emerald-300 hover:text-white border border-emerald-300 px-4 py-2 rounded-full transition duration-200"
+                        className="inline-block text-sm font-semibold text-black bg-emerald-400 hover:text-white border border-emerald-300 px-4 py-2 rounded-full transition duration-200"
                       >
                         ← Back to Red Wines
                       </Link>

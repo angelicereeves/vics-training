@@ -107,7 +107,7 @@ export default function Mocktails() {
                 className="flex justify-between items-center cursor-pointer"
                 onClick={() => toggle(index)}
               >
-                <h2 className="text-xl font-serif font-bold text-emerald-200">
+                <h2 className="text-xl font-mono font-bold text-emerald-200">
                   {cocktail.name}
                 </h2>
                 <span

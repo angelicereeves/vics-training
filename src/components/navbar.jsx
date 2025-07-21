@@ -6,17 +6,18 @@ const navItems = [
   { name: "Home", path: "/" },
   { name: "Food", path: "/food" },
   { name: "Wine", path: "/wine" },
-  { name: "Liquor", path: "/liquor" },
   { name: "Cocktails", path: "/cocktails" },
+  { name: "Liquor", path: "/liquor" },
   { name: "Service", path: "/service" },
   { name: "Music", path: "/music" },
+  { name: "Quiz", path: "/quiz" },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-black text-white shadow-md">
+    <nav className="bg-black text-white shadow-md opacity-90">
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo and Brand Name */}
         <div className="flex items-center space-x-3">

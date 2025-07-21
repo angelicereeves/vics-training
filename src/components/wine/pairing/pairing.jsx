@@ -51,7 +51,13 @@ export default function Pairing() {
           className="min-h-screen bg-cover bg-center bg-no-repeat text-white relative"
           style={{ backgroundImage: `url(${BGpic})` }}
         >
-      <div className="max-w-5xl mx-auto space-y-12">
+      <div className="max-w-5xl mx-auto space-y-12 py-10">
+          <Link
+            to="/wine"
+            className="inline-block px-6 py-3 text-white bg-emerald-600 hover:bg-emerald-700 rounded-xl font-mono font-bold shadow-md transition"
+          >
+            ⬅ Back to Wine Home
+          </Link>
         <h1 className="text-5xl font-mono font-bold text-emerald-400 text-center drop-shadow-sm">
           Wine Pairing Guide
         </h1>

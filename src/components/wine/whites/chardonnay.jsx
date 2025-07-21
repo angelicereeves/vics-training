@@ -67,11 +67,17 @@ export default function Chardonnay() {
 
 
   return (
-    <div
-          className="min-h-screen bg-cover bg-center bg-no-repeat text-white relative"
-          style={{ backgroundImage: `url(${wineBG})` }}
-        >
-      <div className="max-w-5xl mx-auto space-y-14">
+       <div
+                     className="min-h-screen bg-cover bg-center bg-no-repeat text-white relative"
+                     style={{ backgroundImage: `url(${wineBG})` }}
+                   >
+             <div className="max-w-5xl mx-auto space-y-14 py-10">
+               <Link
+                 to="/wine/white"
+                 className="inline-block text-sm font-semibold bg-emerald-400 text-black hover:text-white border border-emerald-300 px-4 py-2 rounded-full transition duration-200"
+               >
+                 ← Back to White Wines
+               </Link>
         <h1 className="text-5xl font-mono font-bold text-emerald-400 border-b-4 border-emerald-400 pb-2 drop-shadow-md text-center">
           Chardonnay
         </h1>
@@ -181,7 +187,7 @@ export default function Chardonnay() {
         <div className="text-center pt-10">
           <Link
             to="/wine/white"
-            className="inline-block text-sm font-semibold text-emerald-300 hover:text-white border border-emerald-300 px-4 py-2 rounded-full transition duration-200"
+            className="inline-block text-sm font-semibold text-black bg-emerald-400 hover:text-white border border-emerald-300 px-4 py-2 rounded-full transition duration-200"
           >
             ← Back to White Wines
           </Link>

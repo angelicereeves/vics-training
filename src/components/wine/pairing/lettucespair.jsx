@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import BGpic from "../../../assets/BGimages/food1.jpg";
 
 export default function LettucesPair() {
   const lettucesAndSoups = [
@@ -63,8 +64,11 @@ export default function LettucesPair() {
 const [expandedIndex, setExpandedIndex] = useState(null);
 
 return (
-  <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-emerald-900 text-white py-16 px-4">
-    <div className="max-w-5xl mx-auto space-y-10">
+       <div
+                     className="min-h-screen bg-cover bg-center bg-no-repeat text-white relative"
+                     style={{ backgroundImage: `url(${BGpic})` }}
+                   >
+             <div className="max-w-5xl mx-auto space-y-14 py-10">
         <div className="text-center pt-10">
   <Link
     to="/pairing"
@@ -74,7 +78,7 @@ return (
   </Link>
 </div>
 
-      <h1 className="text-4xl font-serif font-bold text-center text-emerald-400 border-b border-emerald-600 pb-4 drop-shadow-sm">
+      <h1 className="text-4xl font-mono font-bold text-center text-emerald-400 border-b border-emerald-600 pb-4 drop-shadow-sm">
         Lettuce and Soup Pairings
       </h1>
 
@@ -88,7 +92,7 @@ return (
               className="text-left w-full flex justify-between items-center"
               onClick={() => setExpandedIndex(index === expandedIndex ? null : index)}
             >
-              <h2 className="text-2xl font-bold text-emerald-300 font-serif">
+              <h2 className="text-2xl font-bold text-emerald-300 font-mono">
                 {item.dish}
               </h2>
               <span
