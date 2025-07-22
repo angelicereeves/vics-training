@@ -1,30 +1,42 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import BGpic from "../../assets/BGimages/bar3.jpg";
+import Svedka from "../../assets/liquorImages/svedka.jpg";
+import Primrose from "../../assets/liquorImages/primrose.jpg";
+import Sauza from "../../assets/liquorImages/sauza.jpg";
+import Hamilton from "../../assets/liquorImages/hamilton.jpg";
+import FourRoses from "../../assets/liquorImages/fourroses.jpg";
+import Clan from "../../assets/liquorImages/clan.jpg";
 
 const wellLiquors = [
   {
     name: "SVEDKA VODKA",
+    image: Svedka,
     info: "Popular vodka with a clean, neutral flavor profile."
   },
   {
     name: "PRIMROSE GIN",
+    image: Primrose,
     info: "Gin option, versatile with a clean botanical flavor."
   },
   {
     name: "SAUZA HACIENDA BLANCO",
+    image: Sauza,
     info: "Tequila ideal for mixing; crisp and straightforward agave notes."
   },
   {
     name: "HAMILTON WHITE STACHE RUM",
+    image: Hamilton,
     info: "White rum known for its bold sugarcane flavor and versatility in cocktails."
   },
   {
     name: "FOUR ROSES BOURBON",
+    image: FourRoses,
     info: "Balanced bourbon with light spice and fruit."
   },
   {
     name: "CLAN MCGREGOR SCOTCH",
+    image: Clan,
     info: "Affordable blended Scotch whisky, light and smooth."
   },
 ];
@@ -90,8 +102,7 @@ export default function WellList() {
               {expandedIndex === index && (
                 <div className="mt-4 space-y-4">
                   <div className="w-full h-48 bg-emerald-950/20 border border-emerald-500 rounded-xl flex items-center justify-center text-sm italic text-emerald-300">
-                    {/* Image Placeholder */}
-                    image or logo goes here
+                    <img src={wellLiquors.image} alt={wellLiquors.name} className="max-h-full max-w-full object-cover rounded-lg" />
                   </div>
                   <p className="text-sm font-mono font-semibold text-emerald-100">
                     <span className="font-bold text-emerald-500">Info: </span>

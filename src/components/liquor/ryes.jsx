@@ -1,14 +1,32 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import BGpic from "../../assets/BGimages/bar3.jpg";
+import BrothersBond from "../../assets/liquorImages/brothersbond.jpg";
+import BulleitRye from "../../assets/liquorImages/bulleitrye.jpg";
+import HighWestDoubleRye from "../../assets/liquorImages/highwestdoublerye.jpg";
+import KnobCreek from "../../assets/liquorImages/knobcreekrye.jpg";
+import SazeracRye from "../../assets/liquorImages/sazeracrye.jpg";
+import WhistlePig12yr from "../../assets/liquorImages/whistlepig12.jpg";
 
 const ryeWhiskeys = [
-  { name: "BROTHERS BOND RYE", info: "Smooth, spicy rye whiskey with rich vanilla and caramel." },
-  { name: "BULLEIT RYE", info: "High-rye content with bold spice, dried fruit, and a clean finish." },
-  { name: "HIGH WEST DOUBLE RYE", info: "Blended rye with cinnamon, clove, and mint notes." },
-  { name: "KNOB CREEK RYE 100 PROOF", info: "Full-bodied rye with bold spice and oak, bottled at 100 proof." },
-  { name: "SAZERAC STRAIGHT RYE", info: "Classic rye whiskey with clove, anise, and subtle vanilla." },
-  { name: "WHISTLEPIG 12YR OLD WORLD", info: "Aged rye finished in wine casks for complexity and depth." }
+  { name: "BROTHERS BOND RYE",
+    image: BrothersBond, 
+    info: "Smooth, spicy rye whiskey with rich vanilla and caramel." },
+  { name: "BULLEIT RYE", 
+    image: BulleitRye,
+    info: "High-rye content with bold spice, dried fruit, and a clean finish." },
+  { name: "HIGH WEST DOUBLE RYE", 
+    image: HighWestDoubleRye,
+    info: "Blended rye with cinnamon, clove, and mint notes." },
+  { name: "KNOB CREEK RYE 100 PROOF", 
+    image: KnobCreek,
+    info: "Full-bodied rye with bold spice and oak, bottled at 100 proof." },
+  { name: "SAZERAC STRAIGHT RYE", 
+    image: SazeracRye,
+    info: "Classic rye whiskey with clove, anise, and subtle vanilla." },
+  { name: "WHISTLEPIG 12YR OLD WORLD", 
+    image: WhistlePig12yr,
+    info: "Aged rye finished in wine casks for complexity and depth." }
 ];
 
 
@@ -72,8 +90,11 @@ export default function RyeList() {
               {expandedIndex === index && (
                 <div className="mt-4 space-y-4">
                   <div className="w-full h-48 bg-emerald-950/20 border border-emerald-500 rounded-xl flex items-center justify-center text-sm italic text-emerald-300">
-                    {/* Image Placeholder */}
-                    image or logo goes here
+                    <img
+                      src={ryeWhiskeys.image}
+                      alt={ryeWhiskeys.name}
+                      className="object-contain h-full"
+                    />
                   </div>
                   <p className="text-sm font-mono font-semibold text-emerald-100">
                     <span className="font-bold text-emerald-500">Info: </span>

@@ -5,13 +5,13 @@ import foodHomeBg from "../../assets/BGimages/food10.jpg";
 export default function Food() {
   const foodCategories = [
     { name: "Starters", path: "/food/starters" },
-    { name: "Lettuces", path: "/food/lettuces" },
-    { name: "Crust", path: "/food/crust" },
+    { name: "Lettuces and Soups", path: "/food/lettuces" },
+    { name: "Crusts", path: "/food/crust" },
     { name: "Hold Me", path: "/food/holdme" },
-    { name: "Pasta", path: "/food/pasta" },
+    { name: "Pastas", path: "/food/pasta" },
     { name: "Mains", path: "/food/mains" },
     { name: "Sides", path: "/food/sides" },
-    { name: "Dessert", path: "/food/dessert" },
+    { name: "Desserts", path: "/food/dessert" },
   ];
 
   return (

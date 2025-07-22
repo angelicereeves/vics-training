@@ -1,30 +1,42 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import BGpic from "../../assets/BGimages/bar3.jpg";
+import Beefeater from "../../assets/liquorImages/beefeater.jpg";
+import Primrose from "../../assets/liquorImages/primrose.jpg";
+import BombaySapphire from "../../assets/liquorImages/bombaysapphire.jpg";
+import Hendricks from "../../assets/liquorImages/hendricks.jpg";
+import Monkey47 from "../../assets/liquorImages/monkey47.jpg";
+import Tanqueray from "../../assets/liquorImages/tanqueray.jpg";
 
 const gin = [
   {
     name: "BEEFEATER GIN",
+    image: Beefeater,
     info: "Classic London dry gin with strong juniper and citrus notes."
   },
   {
     name: "PRIMROSE GIN",
+    image: Primrose,
     info: "Well gin option, versatile with a clean botanical flavor."
   },
   {
     name: "BOMBAY LONDON SAPPHIRE GIN",
+    image: BombaySapphire,
     info: "Smooth and aromatic with ten botanicals, great for martinis."
   },
   {
     name: "HENDRICKS GIN",
+    image: Hendricks,
     info: "Infused with cucumber and rose petals for a unique, floral flavor."
   },
   {
     name: "MONKEY 47 DRY GIN SCHWARZWALD",
+    image: Monkey47,
     info: "Complex German gin with 47 botanicals; earthy, citrusy, and bold."
   },
   {
     name: "TANQUERAY LONDON DRY GIN",
+    image: Tanqueray,
     info: "Well-balanced gin known for its crisp, dry taste and bold juniper."
   }
 ];
@@ -89,8 +101,11 @@ export default function GinList() {
               {expandedIndex === index && (
                 <div className="mt-4 space-y-4">
                   <div className="w-full h-48 bg-emerald-950/20 border border-emerald-500 rounded-xl flex items-center justify-center text-sm italic text-emerald-300">
-                    {/* Image Placeholder */}
-                    image or logo goes here
+                    <img
+                      src={gin.image}
+                      alt={gin.name}
+                      className="object-contain h-full"
+                    />
                   </div>
                   <p className="text-sm font-mono font-semibold text-emerald-100">
                     <span className="font-bold text-emerald-500">Info: </span>

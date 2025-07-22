@@ -1,28 +1,84 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import BGpic from "../../assets/BGimages/bar3.jpg";
+import ClanMcGregor from "../../assets/liquorImages/clanmcgregor.jpg";
+import CrownRoyalCanadian from "../../assets/liquorImages/crownroyal.jpg";
+import CrownRoyalApple from "../../assets/liquorImages/crownroyalapple.jpg";
+import CrownRoyalBlackBerry from "../../assets/liquorImages/crownroyalblackberry.jpg";
+import CrownRoyalPeach from "../../assets/liquorImages/crownroyalpeach.jpg";
+import CrownRoyalVanilla from "../../assets/liquorImages/crownroyalvanilla.jpg";
+import DewarsWhiteLabel from "../../assets/liquorImages/dewarswhitelabel.jpg";
+import Redbreast12Year from "../../assets/liquorImages/redbreast12year.jpg";
+import JamesonBlended from "../../assets/liquorImages/jameson.jpg";
+import JohnnieWalkerBlackLabel from "../../assets/liquorImages/johnniewalkerblacklabel.jpg";
+import JohnnieWalkerBlueLabel from "../../assets/liquorImages/johnniewalkerbluelabel.jpg";
+import Macallan12Year from "../../assets/liquorImages/macallan12.jpg";
+import Macallan18Year from "../../assets/liquorImages/macallan18.jpg";
+import ProperTwelveIrishApple from "../../assets/liquorImages/propertwelveirishapple.jpg";
+import TheGlenlivet12Year from "../../assets/liquorImages/glenlivet12.jpg";
+import TheGlenlivet21Year from "../../assets/liquorImages/glenlivet21.jpg";
+import SuntoryWhiskyToki from "../../assets/liquorImages/suntorywhisky.jpg";
+import HennessyVSCognac from "../../assets/liquorImages/hennessyvs.jpg";
+import ClydesideStobcross from "../../assets/liquorImages/clydesidestobcross.jpg";
 
 const internationalWhiskeys = [
-  { name: "CLAN MCGREGOR SCOTCH", info: "Affordable blended Scotch whisky, light and smooth." },
-  { name: "CROWN ROYAL CANADIAN", info: "Iconic Canadian whisky with a creamy texture and vanilla notes." },
-  { name: "CROWN ROYAL APPLE", info: "Canadian whisky infused with crisp apple flavor." },
-  { name: "CROWN ROYAL BLACK BERRY", info: "Fruity Canadian whisky with bold berry notes." },
-  { name: "CROWN ROYAL PEACH", info: "Peach-flavored Canadian whisky with juicy sweetness." },
-  { name: "CROWN ROYAL VANILLA", info: "Smooth Canadian whisky blended with vanilla." },
-  { name: "DEWARS WHITE LABEL", info: "Blended Scotch whisky with honey, heather, and vanilla." },
-  { name: "REDBREAST 12 YEAR IRISH WHISKEY", info: "Single pot still Irish whiskey with sherry influence." },
-  { name: "JAMESON BLENDED IRISH", info: "Balanced Irish whiskey with floral and spice notes." },
-  { name: "JOHNNIE WALKER BLACK LABEL 12 YR", info: "Popular blended Scotch with smoky malt and dark fruit." },
-  { name: "JOHNNIE WALKER BLUE LABEL", info: "Premium Scotch blend with smooth richness and depth." },
-  { name: "MACCALLAN 12 YR SCOTCH", info: "Sherry-cask matured Scotch with dried fruit and spice." },
-  { name: "MACCALLAN 18 YR SCOTCH", info: "Aged Scotch with deep oak, raisin, and vanilla tones." },
-  { name: "PROPER TWELVE IRISH APPLE", info: "Irish whiskey blended with crisp apple flavor." },
-  { name: "THE GLENLIVET 12 YEAR", info: "Single malt Scotch with citrus, apple, and oak." },
-  { name: "THE GLENLIVET 21 YR", info: "Luxuriously aged Scotch with rich fruit and spice complexity." },
-  { name: "SUNTORY WHISKY TOKI", info: "Japanese whisky with orchard fruit, honey, and spice." },
-  { name: "HENNESSY VS COGNAC", info: "Cognac with a harmonious blend of oak, vanilla, and spice." },
-  { name: "CHRISTIAN BROTHERS BRANDY ", info: "Smooth American brandy with caramel and vanilla notes." },
-  { name: "CLYDESIDE 'STOBCROSS' SINGLE MALT", info: "Scottish single malt with citrus, malt, and floral notes." }
+  { name: "CLAN MCGREGOR SCOTCH", 
+    image: ClanMcGregor,
+    info: "Affordable blended Scotch whisky, light and smooth." },
+  { name: "CROWN ROYAL CANADIAN", 
+    image: CrownRoyalCanadian,
+    info: "Iconic Canadian whisky with a creamy texture and vanilla notes." },
+  { name: "CROWN ROYAL APPLE", 
+    image: CrownRoyalApple,
+    info: "Canadian whisky infused with crisp apple flavor." },
+  { name: "CROWN ROYAL BLACK BERRY", 
+    image: CrownRoyalBlackBerry,
+    info: "Fruity Canadian whisky with bold berry notes." },
+  { name: "CROWN ROYAL PEACH", 
+    image: CrownRoyalPeach,
+    info: "Peach-flavored Canadian whisky with juicy sweetness." },
+  { name: "CROWN ROYAL VANILLA", 
+    image: CrownRoyalVanilla,
+    info: "Smooth Canadian whisky blended with vanilla." },
+  { name: "DEWARS WHITE LABEL", 
+    image: DewarsWhiteLabel,
+    info: "Blended Scotch whisky with honey, heather, and vanilla." },
+  { name: "REDBREAST 12 YEAR IRISH WHISKEY", 
+    image: Redbreast12Year,
+    info: "Single pot still Irish whiskey with sherry influence." },
+  { name: "JAMESON BLENDED IRISH", 
+    image: JamesonBlended,
+    info: "Balanced Irish whiskey with floral and spice notes." },
+  { name: "JOHNNIE WALKER BLACK LABEL 12 YR", 
+    image: JohnnieWalkerBlackLabel,
+    info: "Popular blended Scotch with smoky malt and dark fruit." },
+  { name: "JOHNNIE WALKER BLUE LABEL", 
+    image: JohnnieWalkerBlueLabel,
+    info: "Premium Scotch blend with smooth richness and depth." },
+  { name: "MACCALLAN 12 YR SCOTCH", 
+    image: Macallan12Year,
+    info: "Sherry-cask matured Scotch with dried fruit and spice." },
+  { name: "MACCALLAN 18 YR SCOTCH", 
+    image: Macallan18Year,
+    info: "Aged Scotch with deep oak, raisin, and vanilla tones." },
+  { name: "PROPER TWELVE IRISH APPLE", 
+    image: ProperTwelveIrishApple,
+    info: "Irish whiskey blended with crisp apple flavor." },
+  { name: "THE GLENLIVET 12 YEAR", 
+    image: TheGlenlivet12Year,
+    info: "Single malt Scotch with citrus, apple, and oak." },
+  { name: "THE GLENLIVET 21 YR", 
+    image: TheGlenlivet21Year,
+    info: "Luxuriously aged Scotch with rich fruit and spice complexity." },
+  { name: "SUNTORY WHISKY TOKI", 
+    image: SuntoryWhiskyToki,
+    info: "Japanese whisky with orchard fruit, honey, and spice." },
+  { name: "HENNESSY VS COGNAC", 
+    image: HennessyVSCognac,
+    info: "Cognac with a harmonious blend of oak, vanilla, and spice." },
+  { name: "CLYDESIDE 'STOBCROSS' SINGLE MALT", 
+    image: ClydesideStobcross,
+    info: "Scottish single malt with citrus, malt, and floral notes." }
 ];
 
   
@@ -88,7 +144,11 @@ export default function InternationalWhiskeyList() {
                 <div className="mt-4 space-y-4">
                   <div className="w-full h-48 bg-emerald-950/20 border border-emerald-500 rounded-xl flex items-center justify-center text-sm italic text-emerald-300">
                     {/* Image Placeholder */}
-                    image or logo goes here
+                    <img
+                      src={whiskey.image}
+                      alt={whiskey.name}
+                      className="object-contain h-full"
+                    />
                   </div>
                   <p className="text-sm font-mono font-semibold text-emerald-100">
                     <span className="font-bold text-emerald-500">Info: </span>
@@ -99,6 +159,12 @@ export default function InternationalWhiskeyList() {
             </div>
           ))}
         </div>
+        <Link
+          to="/liquor"
+          className="inline-block mt-16 px-6 py-3 bg-white text-emerald-800 font-bold rounded-full shadow-lg hover:bg-emerald-100 transition"
+        >
+          ← Back to Liquor Program
+        </Link>
       </div>
     </div>
   );

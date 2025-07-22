@@ -1,54 +1,67 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import BGpic from "../../assets/BGimages/bar3.jpg";
+import SeedsGrapefruitHibiscus from "../../assets/liquorImages/21seedsgrapefruithibiscus.jpg";
+import SeedsCucumberJalapeno from "../../assets/liquorImages/21seedscucumberjalapeno.jpg";
+import CorralejoReposado from "../../assets/liquorImages/corralejoreposado.jpg";
+import DonJulioAnejo1942 from "../../assets/liquorImages/donjulioanejo1942.jpg";
+import FlechaAzulExtraAnejo from "../../assets/liquorImages/flechaazulextraanejo.jpg";
+import GranCentenarioBlanco from "../../assets/liquorImages/grancentenerioblanco.jpg";
+import GranCentenarioReposado from "../../assets/liquorImages/grancentenerioreposado.jpg";
+import LaloBlanco from "../../assets/liquorImages/laloblanco.jpg";
+import SauzaHaciendaBlanco from "../../assets/liquorImages/sauza.jpg";
+import GemAndBoltMezcal from "../../assets/liquorImages/gemandboltmezcal.jpg";
+
 
 const tequila = [
   {
     name: "21 SEEDS GRAPEFRUIT HIBISCUS BLANCO",
+    image: SeedsGrapefruitHibiscus,
     info: "Infused blanco tequila with natural grapefruit and hibiscus; light and floral."
   },
   {
     name: "21 SEEDS TEQUILA CUCUMBER JALAPENO BLANCO",
+    image: SeedsCucumberJalapeno,
     info: "Flavor-infused tequila with refreshing cucumber and a touch of jalapeño spice."
   },
   {
-    name: "CASAMIGOS TEQUILA BLANCO",
-    info: "Crisp and clean with hints of citrus, vanilla, and smooth agave."
-  },
-  {
     name: "CORRALEJO REPOSADO",
+    image: CorralejoReposado,
     info: "Aged in oak barrels for a smooth, slightly woody and vanilla-forward taste."
   },
   {
-    name: "DON JULIO BLANCO",
-    info: "Unaged tequila with fresh agave, citrus, and herbal notes."
-  },
-  {
     name: "DON JULIO ANEJO 1942",
+    image: DonJulioAnejo1942,
     info: "Luxury añejo tequila aged for at least 2.5 years; rich caramel, vanilla, and oak."
   },
   {
     name: "FLECHA AZUL EXTRA ANEJO",
+    image: FlechaAzulExtraAnejo,
     info: "Aged more than 3 years, ultra-premium and complex with layers of spice and oak."
   },
   {
     name: "GRAN CENTENARIO BLANCO",
+    image: GranCentenarioBlanco,
     info: "Smooth and lightly sweet blanco with agave-forward character."
   },
   {
     name: "GRAN CENTENARIO REPOSADO",
+    image: GranCentenarioReposado,
     info: "Rested in oak barrels; warm vanilla, citrus, and spice flavors."
   },
   {
     name: "LALO BLANCO",
+    image: LaloBlanco,
     info: "Modern, additive-free tequila with bright citrus and pure agave taste."
   },
   {
     name: "SAUZA HACIENDA BLANCO",
+    image: SauzaHaciendaBlanco,
     info: "Tequila ideal for mixing; crisp and straightforward agave notes."
   },
   {
     name: "GEM AND BOLT MEZCAL ESPADIN",
+    image: GemAndBoltMezcal,
     info: "Organic mezcal with a hint of damiana; smooth, smoky, and herbaceous."
   }
 ];
@@ -113,8 +126,11 @@ export default function TequilaList() {
               {expandedIndex === index && (
                 <div className="mt-4 space-y-4">
                   <div className="w-full h-48 bg-emerald-950/20 border border-emerald-500 rounded-xl flex items-center justify-center text-sm italic text-emerald-300">
-                    {/* Image Placeholder */}
-                    image or logo goes here
+                    <img
+                      src={tequila.image}
+                      alt={tequila.name}
+                      className="max-w-full max-h-full object-cover rounded-lg"
+                    />
                   </div>
                   <p className="text-sm font-mono font-semibold text-emerald-100">
                     <span className="font-bold text-emerald-500">Info: </span>

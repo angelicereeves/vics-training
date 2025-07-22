@@ -88,7 +88,6 @@ import Christmas from "./components/cocktails/seasonalcocktails/christmas";
 import ValentinesDay from "./components/cocktails/seasonalcocktails/valentinesday";
 import CincoDeMayo from "./components/cocktails/seasonalcocktails/cincodemayo";
 import Service from "./components/service";
-import Music from "./components/music";
 import Quiz from "./components/quiz";
 
 
@@ -195,7 +194,6 @@ export default function App() {
 
 
         <Route path="/service" element={<Service />} />
-        <Route path="/music" element={<Music />} />
         <Route path="/quiz" element={<Quiz />} />
       </Routes>
     </>

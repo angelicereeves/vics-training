@@ -133,7 +133,7 @@ export default function Cabs() {
       <div className="max-w-5xl mx-auto space-y-14 py-10">
                         <Link
                           to="/wine/red"
-                          className="inline-block text-sm font-mono font-semibold bg-emerald-400 text-black hover:text-white border border-emerald-300 px-4 py-2 rounded-full transition duration-200"
+                          className="inline-block text-sm font-semibold bg-emerald-400 text-black hover:text-white border border-emerald-300 px-4 py-2 rounded-full transition duration-200"
                         >
                           ← Back to Red Wines
                         </Link>

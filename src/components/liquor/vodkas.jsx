@@ -1,50 +1,73 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import BGpic from "../../assets/BGimages/bar3.jpg";
+import WildRootsApple from "../../assets/liquorImages/wildrootsapple.jpg";
+import WildRootsPear from "../../assets/liquorImages/wildrootspear.jpg";
+import Svedka from "../../assets/liquorImages/svedka.jpg";
+import SmirnoffCherry from "../../assets/liquorImages/smirnoffcherry.jpg";
+import SmirnoffLemon from "../../assets/liquorImages/smirnofflemon.jpg";
+import SmirnoffVanilla from "../../assets/liquorImages/smirnoffvanilla.jpg";
+import Belvedere from "../../assets/liquorImages/belvedere.jpg";
+import Chopin from "../../assets/liquorImages/chopin.jpg";
+import GreyGoose from "../../assets/liquorImages/greygoose.jpg";
+import KetelOne from "../../assets/liquorImages/ketelone.jpg";
+import Titos from "../../assets/liquorImages/titos.jpg";
+
 
 const vodka = [
   {
     name: "WILD ROOTS APPLE CINNAMON VODKA",
+    image: WildRootsApple,
     info: "Infused with real apple and cinnamon for a warm, spiced profile."
   },
   {
     name: "WILD ROOTS PEAR VODKA",
+    image: WildRootsPear,
     info: "Fruit-forward vodka with juicy pear notes and a smooth finish."
   },
   {
     name: "SVEDKA VODKA",
+    image: Svedka,
     info: "Popular well vodka with a clean, neutral flavor profile."
   },
   {
     name: "SMIRNOFF CHERRY FLAVORED VODKA",
+    image: SmirnoffCherry,
     info: "Bold cherry-flavored vodka, great for mixing or shots."
   },
   {
     name: "SMIRNOFF LEMON FLAVORED CITRON",
+    image: SmirnoffLemon,
     info: "Bright lemon-flavored vodka with citrus tang."
   },
   {
     name: "SMIRNOFF VANILLA VODKA",
+    image: SmirnoffVanilla,
     info: "Smooth vanilla flavor with dessert-like sweetness."
   },
   {
     name: "BELVEDERE VODKA",
+    image: Belvedere,
     info: "Polish rye vodka known for its velvety texture and purity."
   },
   {
     name: "CHOPIN VODKA",
+    image: Chopin,
     info: "Potato-based vodka with a creamy texture and rich body."
   },
   {
     name: "GREY GOOSE",
+    image: GreyGoose,
     info: "French vodka made from wheat; smooth and clean finish."
   },
   {
     name: "KETEL ONE",
+    image: KetelOne,
     info: "Dutch vodka distilled from wheat, crisp and balanced."
   },
   {
     name: "TITO'S HANDMADE",
+    image: Titos,
     info: "American corn-based vodka with a smooth and mellow profile."
   }
 ];
@@ -110,8 +133,11 @@ export default function VodkaList() {
               {expandedIndex === index && (
                 <div className="mt-4 space-y-4">
                   <div className="w-full h-48 bg-emerald-950/20 border border-emerald-500 rounded-xl flex items-center justify-center text-sm italic text-emerald-300">
-                    {/* Image Placeholder */}
-                    image or logo goes here
+                    <img
+                      src={vodka.image}
+                      alt={vodka.name}
+                      className="object-contain h-full"
+                    />
                   </div>
                   <p className="text-sm font-mono font-semibold text-emerald-100">
                     <span className="font-bold text-emerald-500">Info: </span>

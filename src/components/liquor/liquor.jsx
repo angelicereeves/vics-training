@@ -14,7 +14,7 @@ export default function Cocktails() {
       {/* Main Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center space-y-10">
         <h1 className="text-5xl font-mono font-bold text-emerald-500 drop-shadow-lg">
-          Vic’s Beer and Liqour Program
+          Vic’s Beer and Liquor Program
         </h1>
 
         <p className="text-lg font-mono font-bold text-emerald-100">
