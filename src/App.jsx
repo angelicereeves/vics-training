@@ -87,7 +87,15 @@ import Autumn from "./components/cocktails/seasonalcocktails/autumn";
 import Christmas from "./components/cocktails/seasonalcocktails/christmas";
 import ValentinesDay from "./components/cocktails/seasonalcocktails/valentinesday";
 import CincoDeMayo from "./components/cocktails/seasonalcocktails/cincodemayo";
-import Service from "./components/service";
+
+
+import Service from "./components/service/service";
+import Servers from "./components/service/servers";
+import Bussers from "./components/service/bussers";
+import Runners from "./components/service/runners";
+import Bartenders from "./components/service/bartenders";
+import Hosts from "./components/service/hosts";
+
 import Quiz from "./components/quiz";
 
 
@@ -193,7 +201,13 @@ export default function App() {
 
 
 
-        <Route path="/service" element={<Service />} />
+        <Route path="/service/service" element={<Service />} />
+        <Route path="/service/bussers" element={<Bussers />} />
+        <Route path="/service/servers" element={<Servers />} />
+        <Route path="/service/runners" element={<Runners />} />
+        <Route path="/service/bartenders" element={<Bartenders />} />
+        <Route path="/service/hosts" element={<Hosts />} />
+
         <Route path="/quiz" element={<Quiz />} />
       </Routes>
     </>

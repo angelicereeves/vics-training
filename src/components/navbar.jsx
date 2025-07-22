@@ -8,7 +8,7 @@ const navItems = [
   { name: "Wine", path: "/wine" },
   { name: "Cocktails", path: "/cocktails" },
   { name: "Liquor", path: "/liquor" },
-  { name: "Service", path: "/service" },
+  { name: "Service", path: "/service/service" },
   { name: "Quiz", path: "/quiz" },
 ];
 
