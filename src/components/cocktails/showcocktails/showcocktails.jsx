@@ -98,7 +98,7 @@ export default function ShowCocktails() {
             to="/cocktails/showcocktails/girlfromnorthcountry"
             className="bg-emerald-400 hover:bg-emerald-600 text-white font-bold font-mono text-center py-4 px-8 rounded-2xl text-xl shadow-md transition duration-300"
           >
-            Girl From North Country
+            Girl From The North Country
           </Link>
           <Link
             to="/cocktails/showcocktails/comefromaway"
