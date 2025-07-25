@@ -2,6 +2,13 @@
   import React, { useState } from "react";
     import { Link } from "react-router-dom";
 import BGpic from "../../assets/BGimages/food8.jpg";
+import AntipastoSalad from "../../assets/foodImages/antipastosalad.jpg";
+import CaesarSalad from "../../assets/foodImages/ceasarsalmon.jpg";
+import KaleSalad from "../../assets/foodImages/kalesalad.jpg";
+import HouseSalad from "../../assets/foodImages/housesalad.jpg";
+import MinSoup from "../../assets/foodImages/minsoup.jpg";
+import BeetSalad from "../../assets/foodImages/beetsalad.jpg";
+import FrenchOnionSoup from "../../assets/foodImages/frenchonionsoup.jpg";
 
 export default function Starters() {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -9,13 +16,15 @@ export default function Starters() {
     const lettuces = [
     {
       name: "Chopped Antipasto",
+      image: AntipastoSalad,
       description:
         "Iceberg and radicchio in spicy brown mustard vinaigrette with pepperoncini, provolone, ham, salami, Castelvetrano olives, pickled peppers & onions, chickpeas, cherry peppers, and Pecorino. Allergens – garlic, onions, dairy, bell peppers.",
     },
     {
       name: "Caesar Salad",
+      image: CaesarSalad,
       description:
-        "Romaine tossed in buttermilk-based Caesar dressing with anchovy breadcrumbs, shaved Pecorino, and crostinis. Allergens – Fish, gluten, garlic, onions, dairy. Vegetarian without anchovies. Gluten Free without breadcrumbs and crostini.",
+        "Romaine tossed in buttermilk-based Caesar dressing with anchovy breadcrumbs, shaved Pecorino, and crostinis. Can add chicken, shrimp, or salmon. Allergens – Fish, gluten, garlic, onions, dairy. Vegetarian without anchovies. Gluten Free without breadcrumbs and crostini.",
     },
     {
       name: "Mr. Luckee",
@@ -24,16 +33,19 @@ export default function Starters() {
     },
     {
       name: "Vic’s House Salad",
+      image: HouseSalad,
       description:
-        "Iceberg, romaine, and arugula with vinaigrette (lemon/spicy mustard/tomato) and salsa cruda, cherry tomatoes, cannellini beans. Allergens – garlic, onions. Vegan with lemon or mustard dressing.",
+        "Iceberg, romaine, and arugula with vinaigrette (lemon/spicy mustard/tomato) and salsa cruda, cherry tomatoes, cannellini beans. Can add chicken, shrimp, or salmon. Allergens – garlic, onions. Vegan with lemon or mustard dressing.",
     },
     {
       name: "Emerald Kale and Chicken",
+      image: KaleSalad,
       description:
         "Kale, Napa cabbage, parsley, mint, green onions, peanuts, and pulled rotisserie chicken in peanut dressing. Garnished with mint and peanuts. Allergens – Peanuts, garlic, onions. VEGAN WITHOUT CHICKEN.",
     },
     {
       name: "Beet Salad",
+      image: BeetSalad,
       description:
         "Golden and red beets, pickled onions, Marcona almonds, arugula, lemon vinaigrette, and feta. Allergens – Dairy, tree nuts, onions. DF/NF/OF options available.",
     },
@@ -44,6 +56,7 @@ export default function Starters() {
     },
     {
       name: "Minestrone Soup",
+      image: MinSoup,
       description:
         "Beans, zucchini, squash, green beans, onions, and ditalini pasta in vegetable chicken stock. NOT VEGETARIAN. GLUTEN FREE WITHOUT ditalini.",
     },
@@ -51,6 +64,12 @@ export default function Starters() {
       name: "New England Clam Chowder",
       description:
         "Clams, clam juice, celery, onion, potatoes, garlic, thyme, bacon, cream, flour roux. Served with crostini. Allergens – Onion, garlic, gluten, shellfish, dairy.",
+    },
+    {
+      name: "French Onion Soup",
+      image: FrenchOnionSoup,
+      description:
+        "Caramelized onions in a beef broth, topped with cheese and crostini. Allergens – Gluten, dairy, onions. NOT VEGETARIAN.",
     },
   ];
 
@@ -90,6 +109,13 @@ export default function Starters() {
                   <span className={`text-xl font-bold transition ${expandedIndex === index ? "text-emerald-400" : "text-gray-300"}`}>
                     {expandedIndex === index ? "−" : "+"}
                     </span>
+                    <div className="w-full h-48 bg-emerald-950/20 border border-emerald-500 rounded-xl flex items-center justify-center text-sm italic text-emerald-300">
+                    <img
+                      src={lettuces[index].image}
+                      alt={lettuces[index].name}
+                      className="object-contain h-full"
+                    />
+                  </div>
 
                 </div>
               </button>

@@ -2,6 +2,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import BGpic from "../../assets/BGimages/food4.jpg";
+import BraisedPork from "../../assets/foodImages/braisedpork.jpg";
+import VealPiccata from "../../assets/foodImages/vealpicatta.jpg";
+import ChickenParmesan from "../../assets/foodImages/chickenparm.jpg";
+import CrispHalfRoastedChicken from "../../assets/foodImages/halfchicken.jpg";
+
 
 export default function Mains() {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -9,21 +14,25 @@ export default function Mains() {
 const mains = [
   {
     name: "Braised Pork Loin",
+    image: BraisedPork,
     description:
       "This is a 16oz pork shoulder butterflied out filled with pancetta, sofritto, parsley, garlic, lemon zest, Pecorino Romano, Maldon Sea salt, fresh cracked black pepper. Seared then braised, set atop a bed of buttered pappardelle, topped with pomodoro sauce. Garnished with Pecorino Romano cheese and basil. Allergens – gluten, garlic, onions, dairy. GLUTEN FREE WITHOUT PASTA.",
   },
   {
     name: "Veal Piccata",
+    image: VealPiccata,
     description:
       "Veal cutlet dredged in flour, with lemon caper butter sauce on top of tagliatelle. Garnished with chopped parsley. Allergens – gluten, garlic, dairy, citrus. GLUTEN FREE WITHOUT PASTA AND FLOUR DREDGE.",
   },
   {
     name: "Chicken Parmesan",
+    image: ChickenParmesan,
     description:
       "Breaded chicken cutlet fried crisp, topped with pomodoro, Pecorino Romano and mozzarella. Served with rigatoni pomodoro. Garnished with basil. Allergens – gluten, garlic, onions, dairy.",
   },
   {
     name: "Crisp Half Roasted Chicken",
+    image: CrispHalfRoastedChicken,
     description:
       "This is a three-pound chicken split. Rubbed with olive oil, Maldon Sea salt, fresh lemon juice and fresh cracked black pepper, Roasted. It will be crisped at the time of production then topped with a Whiskey Bourbon Apricot glaze. It will be sliced between the thigh/leg and breast/wing, stacked, and served with mac and cheese (rotini pasta, cheddar, mozzarella, Pecorino Romano, white pepper) topped with breadcrumbs. Allergens – dairy, gluten, garlic. Gluten Free without mac and cheese.",
   },
@@ -51,6 +60,11 @@ const mains = [
     name: "Blackened Swordfish",
     description:
       "8oz Blackened Swordfish (wild caught from Gulf of Mexico or near Hawaii) served over a bed of mashed potatoes and haricot vert. Topped with a roasted red pepper sauce. Allergens – dairy, onions, garlic. GLUTEN FREE.",
+  },
+  {
+    name: "Blackened Halibut",
+    description:
+      "8oz Blackened Halibut served over a bed of mashed potatoes and spinach. Topped with a roasted red pepper sauce. Allergens – dairy, onions, garlic. GLUTEN FREE.",
   },
 ];
 
@@ -89,6 +103,13 @@ const mains = [
                   <span className={`text-xl font-bold transition ${expandedIndex === index ? "text-emerald-400" : "text-gray-300"}`}>
                     {expandedIndex === index ? "−" : "+"}
                     </span>
+                    <div className="w-full h-48 bg-emerald-950/20 border border-emerald-500 rounded-xl flex items-center justify-center text-sm italic text-emerald-300">
+                    <img
+                      src={mains[index].image}
+                      alt={mains[index].name}
+                      className="object-contain h-full"
+                    />
+                  </div>
                 </div>
               </button>
 

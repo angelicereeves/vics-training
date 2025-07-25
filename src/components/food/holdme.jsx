@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import BGpic from "../../assets/BGimages/food6.jpg";
+import Burger from "../../assets/foodImages/burger.jpg";
 
 export default function HoldMe() {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -15,6 +16,7 @@ const holdMe = [
   },
   {
     name: "Signature Blend Burger",
+    image: Burger,
     description:
       "Our burger blend is 50% chuck, 25% brisket, 25% short rib, 20% fat. Pickled relish, iceberg lettuce, tomato, Vic’s sauce served in a white bun. Cheeses offered for upcharge: Swiss, Sharp Cheddar, Provolone, American. Double cut Applewood Bacon offered with upcharge. Served with choice of fries, and apple slaw. Garnished with a pickle. Allergens – gluten, garlic, onions, dairy.",
   },
@@ -90,6 +92,13 @@ const holdMe = [
                   <span className={`text-xl font-bold transition ${expandedIndex === index ? "text-emerald-400" : "text-gray-300"}`}>
                     {expandedIndex === index ? "−" : "+"}
                     </span>
+                    <div className="w-full h-48 bg-emerald-950/20 border border-emerald-500 rounded-xl flex items-center justify-center text-sm italic text-emerald-300">
+                    <img
+                      src={holdMe[index].image}
+                      alt={holdMe[index].name}
+                      className="object-contain h-full"
+                    />
+                  </div>
                 </div>
               </button>
 

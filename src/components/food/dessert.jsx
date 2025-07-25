@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import BGpic from "../../assets/BGimages/food1.jpg";
+import BreadPudding from "../../assets/foodImages/breadpudding.jpg";
+import RicottaLemon from "../../assets/foodImages/lemonricotta.jpg";
+import Tiramisu from "../../assets/foodImages/tiramisu.jpg";
+import CarrotCake from "../../assets/foodImages/carrotcake.jpg";
+import Cheesecake from "../../assets/foodImages/cheesecake.jpg";
+import ScoopChoc from "../../assets/foodImages/scoopchoc.jpg";
 
 export default function Desserts() {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -8,16 +14,19 @@ export default function Desserts() {
 const desserts = [
   {
     name: "Bread Pudding",
+    image: BreadPudding,
     description:
       "Cubed bread soaked in a custard-like mixture, golden raisins, baked until it becomes a soft spongy and thick texture. Served hot, with caramel, chocolate sauce, and topped with bourbon vanilla sauce. Served ala mode with vanilla ice cream. Allergens – gluten, dairy. Vegetarian.",
   },
   {
     name: "Ricotta & Whipped Lemon Crema",
+    image: RicottaLemon,
     description:
       "Whipped ricotta, cream cheese, honey, lemon juice, lemon zest, and sugar. Very much like a deconstructed cheesecake. Topped with organic honey and roasted chopped pistachios. Allergens – dairy, nuts (pistachios). Vegetarian.",
   },
   {
     name: "Tiramisu",
+    image: Tiramisu,
     description:
       "Allergens – gluten, dairy. Vegetarian.",
   },
@@ -28,11 +37,13 @@ const desserts = [
   },
   {
     name: "Cheesecake",
+    image: Cheesecake,
     description:
       "New York Style cheesecake, topped with a house made Chambord berry compote. Allergens – gluten, dairy. Vegetarian.",
   },
   {
     name: "Carrot Cake",
+    image: CarrotCake,
     description:
       "Traditional carrot cake, walnuts, and a cream cheese icing. Allergens – gluten, dairy, nuts (walnuts). Vegetarian.",
   },
@@ -41,6 +52,12 @@ const desserts = [
     description:
       "Three scoops of sorbet, watermelon, lemon, and mango. Guest may NOT substitute any of the scoops out, or ask for three scoops of the same flavor. Vegan.",
   },
+  {
+    name: "Scoop Ice Cream",
+    image: ScoopChoc,
+    description:
+      "One scoop of vanilla or chocolate ice cream.",
+  }
 ];
 
 
@@ -79,6 +96,13 @@ const desserts = [
                   <span className={`text-xl font-bold transition ${expandedIndex === index ? "text-emerald-400" : "text-gray-300"}`}>
                     {expandedIndex === index ? "−" : "+"}
                     </span>
+                    <div className="w-full h-48 bg-emerald-950/20 border border-emerald-500 rounded-xl flex items-center justify-center text-sm italic text-emerald-300">
+                    <img
+                      src={desserts[index].image}
+                      alt={desserts[index].name}
+                      className="object-contain h-full"
+                    />
+                  </div>
                 </div>
               </button>
 

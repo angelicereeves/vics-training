@@ -9,7 +9,7 @@ const navItems = [
   { name: "Cocktails", path: "/cocktails" },
   { name: "Liquor", path: "/liquor" },
   { name: "Service", path: "/service/service" },
-  { name: "Quiz", path: "/quiz" },
+  { name: "Quiz", path: "/quizzes/quiz" },
 ];
 
 export default function Navbar() {

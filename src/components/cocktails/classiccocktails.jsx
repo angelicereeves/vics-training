@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import BGpic from "../../assets/BGimages/bar22.jpg";
+import BGpic from "../../assets/BGimages/bar3.jpg";
 import Americano from "../../assets/cocktailImages/americano.jpg";
 import AperolSpritz from "../../assets/cocktailImages/aperolspritz.jpg";
 import Aviation from "../../assets/cocktailImages/aviation.jpg";

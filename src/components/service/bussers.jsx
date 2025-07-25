@@ -56,7 +56,7 @@ export default function Servers() {
           ← Back to Service Home
         </Link> 
         <h1 className="text-5xl font-mono font-bold text-emerald-400 text-center drop-shadow-md">
-          Server Duties
+          Busser Duties
         </h1>
 
         {Object.entries(duties).map(([section, tasks]) => {

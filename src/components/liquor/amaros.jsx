@@ -231,9 +231,6 @@ const amaros = [
   { name: "TIRAMISU CREAM LIQUEUR",
     image: null,
     info: "Dessert liqueur with flavors of espresso, cocoa, and mascarpone." },
-  { name: "TIRAMISU LIQUEUR",
-    image: null,
-    info: "Bold, sweet liqueur mimicking the classic Italian dessert." },
   { name: "TEMPUS FUGIT CREME DE NOYAUX",
     image: TempusFugitCremeDeNoyaux,
     info: "Historic almond-flavored liqueur made with apricot kernels—bright pink and floral." }
