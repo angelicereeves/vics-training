@@ -99,16 +99,7 @@ import Hosts from "./components/service/hosts";
 import Quiz from "./components/quizzes/quiz";
 import Quiz1 from "./components/quizzes/quiz1";
 import Quiz2 from "./components/quizzes/quiz2";
-import Quiz3 from "./components/quizzes/quiz3";
-import Quiz4 from "./components/quizzes/quiz4";
-import Quiz5 from "./components/quizzes/quiz5";
-import Quiz6 from "./components/quizzes/quiz6";
-import Quiz7 from "./components/quizzes/quiz7";
-import Quiz8 from "./components/quizzes/quiz8";
-import Quiz9 from "./components/quizzes/quiz9";
-import Quiz10 from "./components/quizzes/quiz10";
-import Quiz11 from "./components/quizzes/quiz11";
-import Quiz12 from "./components/quizzes/quiz12";
+
 
 
 export default function App() {
@@ -222,16 +213,7 @@ export default function App() {
         <Route path="/quizzes/quiz" element={<Quiz />} />
         <Route path="/quizzes/quiz1" element={<Quiz1 />} />
         <Route path="/quizzes/quiz2" element={<Quiz2 />} />
-        <Route path="/quizzes/quiz3" element={<Quiz3 />} />
-        <Route path="/quizzes/quiz4" element={<Quiz4 />} />
-        <Route path="/quizzes/quiz5" element={<Quiz5 />} />
-        <Route path="/quizzes/quiz6" element={<Quiz6 />} />
-        <Route path="/quizzes/quiz7" element={<Quiz7 />} />
-        <Route path="/quizzes/quiz8" element={<Quiz8 />} />
-        <Route path="/quizzes/quiz9" element={<Quiz9 />} />
-        <Route path="/quizzes/quiz10" element={<Quiz10 />} />
-        <Route path="/quizzes/quiz11" element={<Quiz11 />} />
-        <Route path="/quizzes/quiz12" element={<Quiz12 />} />
+
       </Routes>
     </>
   );
