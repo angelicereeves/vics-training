@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import BGpic from "../../assets/BGimages/food14.jpg";
 import Buratta from "../../assets/foodImages/buratta.jpg";
-import CrispyEggplant from "../../assets/foodImages/crispyEggplant.jpg";
+import CrispyEggplant from "../../assets/foodImages/crispyeggplant.jpg";
 import CrabCakes from "../../assets/foodImages/crabcakes.jpg";
 import Nippers from "../../assets/foodImages/nippers.jpg";
 import Meatballs from "../../assets/foodImages/meatballs.jpg";
