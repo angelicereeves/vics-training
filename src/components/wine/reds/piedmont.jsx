@@ -6,8 +6,8 @@ import GiacomoBorgogno from "../../../assets/wineImages/giacomoborgogno.jpg";
 import RenattiRatti from "../../../assets/wineImages/renattiratti.jpg";
 import Damilano from "../../../assets/wineImages/damilano.jpg";
 import TrevitisDuchet from "../../../assets/wineImages/trevitisduchet.jpg";
-import CasaDiMirafioreBarolo from "../../../assets/wineImages/casadiMirafiorebarolo.jpg";
-import CasaDiMirafioreDolcetto from "../../../assets/wineImages/casadiMirafioreDolcetto.jpg";
+import CasaDiMirafioreBarolo from "../../../assets/wineImages/casadimirafiorebarolo.jpg";
+import CasaDiMirafioreDolcetto from "../../../assets/wineImages/casadimirafioredolcetto.jpg";
 import wineBG from "../../../assets/BGimages/bar11.jpg";
 
 export default function Piedmont() {
