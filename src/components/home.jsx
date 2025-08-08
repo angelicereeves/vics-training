@@ -28,7 +28,7 @@ export default function Home() {
         </p>
 
         <Link
-          to="/quiz"
+          to="/quizzes/quiz"
           className="inline-block mt-6 px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-white font-bold font-monorounded-full shadow-lg transition duration-300"
         >
           Test My Knowledge
