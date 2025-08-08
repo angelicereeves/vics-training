@@ -7,7 +7,7 @@ import CrabCakes from "../../assets/foodImages/crabcakes.jpg";
 import Nippers from "../../assets/foodImages/nippers.jpg";
 import Meatballs from "../../assets/foodImages/meatballs.jpg";
 import LobsterBites from "../../assets/foodImages/lobsterbites.jpg";
-import ShrimpCocktail from "../../assets/foodImages/shrimpCocktail.jpg";
+import ShrimpCocktail from "../../assets/foodImages/shrimpcocktail.jpg";
 import VicsChicken from "../../assets/foodImages/vicschicken.jpg";
 
 
