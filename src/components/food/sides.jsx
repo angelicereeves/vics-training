@@ -6,7 +6,7 @@ import Baguette from "../../assets/foodImages/baguette.jpg";
 import Brussels from "../../assets/foodImages/brussels.jpg";
 import Ratatouille from "../../assets/foodImages/ratatouille.jpg";
 import Crostini from "../../assets/foodImages/crostini.jpg";
-import GrilledVeggies from "../../assets/foodImages/grilledVeggies.jpg";
+import GrilledVeggies from "../../assets/foodImages/grilledveggies.jpg";
 import RedPotatoes from "../../assets/foodImages/redpotatoes.jpg";
 import Spinach from "../../assets/foodImages/spinach.jpg";
 import Mash from "../../assets/foodImages/sidemash.jpg";
